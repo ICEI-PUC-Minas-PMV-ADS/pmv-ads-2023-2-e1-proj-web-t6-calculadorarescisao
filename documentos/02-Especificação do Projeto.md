@@ -13,10 +13,10 @@
 <tr>
 <td><b>Necessidades:</b></td>
 <td>
-    1.Saber se irá receber algum valor e quanto será, após a rescisão do contrato.
-    2.Entender o cálculo que será feito.
-    3.Possibilidade de exportar o cálculo.
-    4.Ter a possibilidade de estudar se vale a pena cumprir o aviso prévio.
+    1.Saber se irá receber algum valor e quanto será, após a rescisão do contrato.<br>
+    2.Entender o cálculo que será feito.<br>
+    3.Possibilidade de exportar o cálculo.<br>
+    4.Ter a possibilidade de estudar se vale a pena cumprir o aviso prévio.<br>
 </td>
 </tr>
 </tbody>
@@ -34,10 +34,10 @@
 <tr>
 <td><b>Necessidades:</b></td>
 <td>
-    1.Estudar possibilidade de demissão em comum acordo.
-    2.Evitar acionar a contabilidade até saber aproximadamente o valor que será gasto com a demissão.
-    3.Estudar se vale a pena dar férias antes da demissão.
-    4.Em caso de aposentadoria do empregado ter uma ideia aproximada do valor a ser pago. 
+    1.Estudar possibilidade de demissão em comum acordo.<br>
+    2.Evitar acionar a contabilidade até saber aproximadamente o valor que será gasto com a demissão.<br>
+    3.Estudar se vale a pena dar férias antes da demissão.<br>
+    4.Em caso de aposentadoria do empregado ter uma ideia aproximada do valor a ser pago.<br>
 </td>
 </tr>
 </tbody>
