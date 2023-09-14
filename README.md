@@ -1,26 +1,25 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/sy1vqBms)
-# Título do Projeto
+# Calculadora Rescisão Contratual
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto`
 
-`SEMESTRE`
+`Eixo 01`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Fábio Vinícius Barkoski
+* Gustavo Marques Pereira
+* Lucas Antonio Riboli
+* Lucas Santiago Plínio da Silva
+* Victor Ornelas da Silva
 
 ## Orientador
 
-* Nome completo do professor
+* Marcos André Silveira Kutova 
 
 # Documentação
 
