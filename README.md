@@ -5,7 +5,7 @@
 
 `Desenvolvimento de aplicação web front-end`
 
-`1º semestre/2022`
+`1º semestre/2023`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
