@@ -1,11 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/sy1vqBms)
 # Calculadora Rescisão Contratual
 
-`Análise e Desenvolvimento de Sistemas`
+`Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-`Projeto`
+`Desenvolvimento de aplicação web front-end`
 
-`Eixo 01`
+`1º semestre/2022`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
