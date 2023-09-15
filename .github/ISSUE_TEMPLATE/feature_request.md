@@ -8,18 +8,18 @@ assignees: ''
 ---
 
 [História do Usuário]
-*Eu como* [Perfil do Usuário]
-*Quero* [Necessidade da História]
-*Para* [Motivo da História]
+***Eu como*** [Perfil do Usuário]
+***Quero*** [Necessidade da História]
+***Para*** [Motivo da História]
 
 [Descrição do requisito funcional]
 
 [Critérios de aceitação]
 
 [EXEMPLO]
-*Eu como* Empregado
-*Quero* saber quanto vou receber, caso, peça demissão cumprindo aviso prévio, pois dependendo da diferença de valores posso optar em não cumprir o aviso prévio.
-*Para* Que, dependendo da diferença de valores, posso optar em não cumprir o aviso prévio.
+***Eu como*** Empregado
+***Quero*** saber quanto vou receber, caso, peça demissão cumprindo aviso prévio, pois dependendo da diferença de valores posso optar em não cumprir o aviso prévio.
+***Para*** Que, dependendo da diferença de valores, posso optar em não cumprir o aviso prévio.
 
 *Descrição*
 Aplicação deverá realizar o cálculo com e sem o aviso prévio selecionado.
