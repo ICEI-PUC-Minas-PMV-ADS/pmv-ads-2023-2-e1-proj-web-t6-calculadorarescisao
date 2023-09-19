@@ -6,7 +6,6 @@ A escolha de adotar o Scrum para o projeto se baseia na sua comprovada eficácia
 
 ### Divisão de Papéis
 Com base na metodologia escolhida foi definida a divisão dos papéis da seguinte forma:
-[Adicione informações abaixo sobre a divisão de papéis entre os membros da equipe.]
 - Scrum Master: Lucas Antonio Riboli
 - Product Owner: Victor Ornelas da Silva
 - Equipe de Desenvolvimento: Fabio Vinícius Barkoski, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
@@ -14,7 +13,6 @@ Com base na metodologia escolhida foi definida a divisão dos papéis da seguint
 
 ### Processo
 
-[Adicione informações sobre detalhes da implementação do Scrum seguido pela equipe. A equipe poderá fazer uso de ferramentas on-line (GitHub Project ou Trello) para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução. O quadro Kanban deverá apresentar a estrutura abaixo. Inserir despois das informações uma imagem do Kanban do projeto.]
 - Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
 - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
 - Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
