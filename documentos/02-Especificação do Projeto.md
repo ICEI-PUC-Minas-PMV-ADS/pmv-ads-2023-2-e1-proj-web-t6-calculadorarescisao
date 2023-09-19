@@ -15,8 +15,7 @@
 <td>
     1.Saber se irá receber algum valor e quanto será, após a rescisão do contrato.<br>
     2.Entender o cálculo que será feito.<br>
-    3.Possibilidade de exportar o cálculo.<br>
-    4.Ter a possibilidade de estudar se vale a pena cumprir o aviso prévio.<br>
+    3.Ter a possibilidade de estudar se vale a pena cumprir o aviso prévio.<br>
 </td>
 </tr>
 </tbody>

@@ -16,7 +16,7 @@ Cada modalidade proporciona ao empregado direitos diferentes, possuindo bases de
 Há algum tempo, as rescisões de contrato de trabalho eram obrigatoriamente homologadas nos sindicatos, que por sua vez forneciam profissionais com conhecimento necessário para esclarecer e instruir os empregados que estavam sendo submetidos a uma forma de rescisão. Entretanto, a reforma Trabalhista de 2017 retirou a obrigatoriedade desta homologação de ocorrer nos sindicatos, gerando insegurança, por parte de alguns empregados, sobre pagamento correto do que teria direito. 
 
 ## Problema
-Conforme exposto, o problema que se busca resolver com este projeto é a falta de conhecimento que os trabalhadores e empregadores possuem sobre seus direitos na hora da rescisão de contrato de trabalho.
+Conforme exposto, o problema que se busca resolver com este projeto é a dificuldade de realizar os cálculos na hora da rescisão de contrato de trabalho.
 
 ## Objetivos
 O objetivo geral deste projeto é a criação de uma calculadora que irá fornecer, de forma clara e objetiva, todos os valores que o empregado tem direito a receber na hora da rescisão do contrato de trabalho, levando em consideração as modalidades e as condições de cada empregado.  
