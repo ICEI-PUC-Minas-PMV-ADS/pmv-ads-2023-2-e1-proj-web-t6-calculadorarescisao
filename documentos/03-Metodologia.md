@@ -21,8 +21,13 @@ Com base na metodologia escolhida foi definida a divisão dos papéis da seguint
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
 #### Product Backlog
+Valores a serem entregues no projetos:
+- Documentação de Contexto
+- Especificação do Projeto
+- Metodologia
+- Projeto de Interface
 
-#### Sprint 1
+#### Sprint 1ddd
 ##### Planejamento
 ##### Execução
 ##### Evidências
