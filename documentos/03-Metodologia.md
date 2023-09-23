@@ -9,7 +9,7 @@ Com base na metodologia escolhida foi definida a divisão dos papéis da seguint
 - Scrum Master: Lucas Antonio Riboli
 - Product Owner: Victor Ornelas da Silva
 - Equipe de Desenvolvimento: Fabio Vinícius Barkoski, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
-- Equipe de Design: Gustavo Marques Pereira
+- Equipe de Design: Fabio Vinícius Barkoski e Lucas Antonio Riboli
 
 ### Processo
 
@@ -25,14 +25,19 @@ Valores a serem entregues no projetos:
 - Metodologia
 - Projeto de Interface
 
-#### Sprint 1ddd
+#### Sprint 1
 ##### Planejamento
+Para este sprint o objetivo é criar a Especificação do Projeto e a Documentação de Contexto, além de ter um esbosso de apresentação do projeto.
 ##### Execução
+Separamos o grupo baseado em  cada um dos objetivos da sprint, no qual no final ficou: Fábio e Lucas Riboli em realizar a Especificação do Projeto; Victor e Lucas Silva realizarem a Documentação de Contexto; e o Gustavo em criar o esbosso de apresentação.
 ##### Evidências
+Criado todos os documentos planejados para a sprint, todos eles se localizam no teams do grupo.
 
 #### Sprint 2
 ##### Planejamento
+Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface.
 ##### Execução
+
 ##### Evidências
 
 > **Links Úteis**:
@@ -60,18 +65,14 @@ Valores a serem entregues no projetos:
 </figure> 
   
 ### Ferramentas
-
-[Descreva aqui as ferramentas empregadas no projeto e os ambiente de trabalho utilizados pela  equipe para desenvolvê-lo. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).]
-
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
-| AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
-|-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
-| Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
-| Hospedagem                          | GitHub Pages                       | http://....                            |
+| AMBIENTE                            | PLATAFORMA                         |
+|-------------------------------------|------------------------------------|
+| Repositório de código fonte         | [GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-calculadorarescisao/tree/main/codigo-fonte) |
+| Documentos do projeto               | [GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-calculadorarescisao/tree/main/documentos) |
+| Gerenciamento do Projeto            | [GitHub Projects](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/618) |
+| Hospedagem                          | GitHub Pages |
 
 
 ### Estratégia de Organização de Codificação 
