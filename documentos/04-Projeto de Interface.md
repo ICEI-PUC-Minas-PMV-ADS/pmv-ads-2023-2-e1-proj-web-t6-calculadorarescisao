@@ -21,8 +21,10 @@ Desenvolver um protótipo emerge como uma das maneiras mais ágeis e econômicas
 Protótipos de baixa fidelidade apresentam de forma simplificada o design da interface e o relacionamento entre suas páginas, permitindo evolução da proposta da solução. Neste projeto, os utilizaremos para apoiar a validação dos requisitos e efetuar mudanças dos mesmos, caso seja necessário, para menor impacto na codificação da aplicação.
 
 ![wireframe cálculo](img/wireframe-1.jpeg)
+
 Tela no qual será realizado o cálculo, importante notar que ao lado haverá informações para ajudar o usuário a realizar o cálculo.
 ![wireframe resultado](img/wireframe-2.jpeg)
+
 Tela no qual terá o resultado do cálculo, bem como explicação do mesmo.
  
 > **Links Úteis**:
