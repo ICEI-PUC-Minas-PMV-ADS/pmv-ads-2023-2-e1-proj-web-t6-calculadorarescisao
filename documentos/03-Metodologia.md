@@ -35,7 +35,6 @@ Separamos o grupo baseado em  cada um dos objetivos da sprint, no qual no final 
 Criado todos os documentos planejados para a sprint, todos eles se localizam no teams do grupo.
 
 ![Captura de tela dos documentos no teams](img/documentos-teams.png)
-Captura de tela dos documentos no teams
 
 #### Sprint 2
 ##### Planejamento
@@ -46,7 +45,6 @@ No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto
 Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas.
 
 ![Kanban projeto](img/kanban.png)
-Captura de tela do Kanban do projeto
   
 ### Ferramentas
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
