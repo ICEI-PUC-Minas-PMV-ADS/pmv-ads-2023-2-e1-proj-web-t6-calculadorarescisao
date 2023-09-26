@@ -9,7 +9,7 @@ Com base na metodologia escolhida foi definida a divisão dos papéis da seguint
 - Scrum Master: Lucas Antonio Riboli
 - Product Owner: Victor Ornelas da Silva
 - Equipe de Desenvolvimento: Fabio Vinícius Barkoski, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
-- Equipe de Design: Fabio Vinícius Barkoski e Lucas Antonio Riboli
+- Equipe de Design: **Fabio Vinícius Barkoski**, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
 
 ### Processo
 
@@ -27,18 +27,23 @@ Valores a serem entregues no projetos:
 
 #### Sprint 1
 ##### Planejamento
-Para este sprint o objetivo é criar a Especificação do Projeto e a Documentação de Contexto, além de ter um esbosso de apresentação do projeto.
+Para este sprint o objetivo é criar a Especificação do Projeto e a Documentação de Contexto, além de ter um esbosso de apresentação do projeto, utilizando apenas o Word e PowerPoint no Teams.
 ##### Execução
 Separamos o grupo baseado em  cada um dos objetivos da sprint, no qual no final ficou: Fábio e Lucas Riboli em realizar a Especificação do Projeto; Victor e Lucas Silva realizarem a Documentação de Contexto; e o Gustavo em criar o esbosso de apresentação.
 ##### Evidências
 Criado todos os documentos planejados para a sprint, todos eles se localizam no teams do grupo.
 
+![Captura de tela dos documentos no teams](img/documentos-teams.png)
+
 #### Sprint 2
 ##### Planejamento
-Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface.
+Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface. Para isso será utilizado a ferramenta [Moqup](https://moqups.com/).
 ##### Execução
-
+No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto não houve grande planejamento e uma má distruibuição de tarefas. Ao final o Fábio e Lucas acabaram desempenhando um papel maior durante este sprint.
 ##### Evidências
+Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, segue capturas de telas:
+
+![Kanban projeto](img/kanban.png)
 
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
