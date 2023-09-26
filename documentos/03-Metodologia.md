@@ -35,6 +35,7 @@ Separamos o grupo baseado em  cada um dos objetivos da sprint, no qual no final 
 Criado todos os documentos planejados para a sprint, todos eles se localizam no teams do grupo.
 
 ![Captura de tela dos documentos no teams](img/documentos-teams.png)
+Captura de tela dos documentos no teams
 
 #### Sprint 2
 ##### Planejamento
@@ -42,33 +43,10 @@ Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface. Par
 ##### Execução
 No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto não houve grande planejamento e uma má distruibuição de tarefas. Ao final o Fábio e Lucas acabaram desempenhando um papel maior durante este sprint.
 ##### Evidências
-Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, segue capturas de telas:
+Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas.
 
 ![Kanban projeto](img/kanban.png)
-
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
-
-
-### Etiquetas
-<p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:</p>
-
-<ul>
-  <li>Bug (Erro no código)</li>
-  <li>Desenvolvimento (Development)</li>
-  <li>Documentação (Documentation)</li>
-  <li>Gerência de Projetos (Project Management)</li>
-  <li>Infraestrutura (Infrastructure)</li>
-  <li>Testes (Tests)</li>
-</ul>
-
-<figure> 
-  <img src="https://user-images.githubusercontent.com/100447878/164068979-9eed46e1-9b44-461e-ab88-c2388e6767a1.png"
-    <figcaption>Figura 3 - Tela do esquema de cores e categorias</figcaption>
-</figure> 
+Captura de tela do Kanban do projeto
   
 ### Ferramentas
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
