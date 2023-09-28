@@ -12,13 +12,14 @@ Com base na metodologia escolhida foi definida a divisão dos papéis da seguint
 - Equipe de Design: Fabio Vinícius Barkoski, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
 
 ### Processo
+Como equipe optamos pelo GitHub Project para organizar nossas atividades de desenvolvimento de forma eficiente. Com ele teremos uma ótima maneira de distribuir tarefas e gerenciar sprints, deixando o processo transparente, colaborativo e eficaz. Para alcançar esses pontos, estruturamos o projeto da seguinte forma:
 
-- Backlog: Recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta coluna. 
-- To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
-- In Progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
-- Test: Ao ser finalizada a terefa ela pode vir a ser testada, validando assim o que foi feito.
-- Done: Nesta coluna são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
-
+- Backlog: Recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
+- To Do: Esta coluna representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
+- Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
+- Test: Nesta coluna a tarefa passará por testes que vão validar o que foi feito e a integridade da aplicação.
+- Done: Nesta coluna são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para ser entregues ao usuário.
+![Alt text](image.png)
 #### Product Backlog
 Valores a serem entregues no projetos:
 - Documentação de Contexto
@@ -42,9 +43,11 @@ Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface. Par
 ##### Execução
 No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto não houve grande planejamento e uma má distruibuição de tarefas. Ao final o Fábio e Lucas acabaram desempenhando um papel maior durante este sprint.
 ##### Evidências
-Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas.
+Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, as relacionadas a wireframe e fluxo usando a ferramente Moqup.
 
 ![Kanban projeto](img/kanban.png)
+
+![Moqup projetos](img/evidenciamoqups.png)
   
 ### Ferramentas
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
