@@ -43,7 +43,7 @@ Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface. Par
 ##### Execução
 No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto não houve grande planejamento e uma má distruibuição de tarefas. Ao final o Fábio e Lucas acabaram desempenhando um papel maior durante este sprint.
 ##### Evidências
-Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, as relacionadas a wireframe e fluxo usando a ferramente Moqup.
+Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, incluido as relacionadas a wireframe e fluxo que usamos a ferramente Moqup.
 
 ![Kanban projeto](img/kanban.png)
 
