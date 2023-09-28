@@ -17,8 +17,8 @@ Protótipos de baixa fidelidade apresentam de forma simplificada o design da int
 
 ![wireframe cálculo](img/wireframe-1.jpeg)
 
->Tela no qual será realizado o cálculo, importante notar que ao lado haverá informações para ajudar o usuário a realizar o cálculo.
+    Tela principal no qual será realizado o cálculo, importante notar que ao lado esquerdo(wireframe de texto) haverá informações para auxiliar o usuário durante o cálculo.
 
 ![wireframe resultado](img/wireframe-2.jpeg)
 
->Tela no qual terá o resultado do cálculo, bem como explicação do mesmo.
+    Tela no qual terá o resultado do cálculo, juntamente com a explicação do mesmo.

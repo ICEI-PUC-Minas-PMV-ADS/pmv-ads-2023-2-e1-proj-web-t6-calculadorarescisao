@@ -19,7 +19,7 @@ Como equipe optamos pelo GitHub Project para organizar nossas atividades de dese
 - Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
 - Test: Nesta coluna a tarefa passará por testes que vão validar o que foi feito e a integridade da aplicação.
 - Done: Nesta coluna são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para ser entregues ao usuário.
-![Alt text](image.png)
+![Alt text](img/kanban1.png)
 #### Product Backlog
 Valores a serem entregues no projetos:
 - Documentação de Contexto
@@ -45,7 +45,7 @@ No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto
 ##### Evidências
 Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, incluido as relacionadas a wireframe e fluxo que usamos a ferramente Moqup.
 
-![Kanban projeto](img/kanban.png)
+![Kanban projeto](img/kanban2.png)
 
 ![Moqup projetos](img/evidenciamoqups.png)
   
