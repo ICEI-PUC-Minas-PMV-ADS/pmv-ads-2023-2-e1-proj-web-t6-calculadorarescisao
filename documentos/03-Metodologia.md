@@ -20,9 +20,11 @@ Como equipe optamos pelo GitHub Project para organizar nossas atividades de dese
 - Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
 - Test: Nesta coluna a tarefa passará por testes que vão validar o que foi feito e a integridade da aplicação.
 - Done: Nesta coluna são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para ser entregues ao usuário.
+
 |Imagem|Descrição|
 |------|---------|
-|![Alt text](img/kanban1.png)| Imagem do quadro Kanban. |
+| ![Alt text](img/kanban1.png)| Imagem do quadro Kanban.|
+
 #### Product Backlog
 Valores a serem entregues no projetos:
 - Documentação de Contexto
