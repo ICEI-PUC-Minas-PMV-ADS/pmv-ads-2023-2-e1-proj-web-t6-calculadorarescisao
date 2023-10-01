@@ -8,8 +8,9 @@ A escolha de adotar o Scrum para o projeto se baseia na sua comprovada eficácia
 Com base na metodologia escolhida foi definida a divisão dos papéis da seguinte forma:
 - Scrum Master: Lucas Antonio Riboli
 - Product Owner: Victor Ornelas da Silva
-- Equipe de Desenvolvimento: Fabio Vinícius Barkoski, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
-- Equipe de Design: Fabio Vinícius Barkoski, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
+- Equipe de Desenvolvimento: **Fabio Vinícius Barkoski**, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
+- Equipe de Design: Fabio Vinícius Barkoski, **Gustavo Marques**, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
+- Equipe de Testes: Fabio Vinícius Barkoski, **Gustavo Marques**, Lucas Antonio Riboli, **Lucas Santiago Plínio da Silva**, Victor Ornelas da Silva
 
 ### Processo
 Como equipe optamos pelo GitHub Project para organizar nossas atividades de desenvolvimento de forma eficiente. Com ele teremos uma ótima maneira de distribuir tarefas e gerenciar sprints, deixando o processo transparente, colaborativo e eficaz. Para alcançar esses pontos, estruturamos o projeto da seguinte forma:
@@ -19,7 +20,9 @@ Como equipe optamos pelo GitHub Project para organizar nossas atividades de dese
 - Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
 - Test: Nesta coluna a tarefa passará por testes que vão validar o que foi feito e a integridade da aplicação.
 - Done: Nesta coluna são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para ser entregues ao usuário.
-![Alt text](img/kanban1.png)
+|Imagem|Descrição|
+|------|---------|
+|![Alt text](img/kanban1.png)| Imagem do quadro Kanban. |
 #### Product Backlog
 Valores a serem entregues no projetos:
 - Documentação de Contexto
@@ -34,8 +37,9 @@ Para este sprint o objetivo é criar a Especificação do Projeto e a Documenta�
 Separamos o grupo baseado em  cada um dos objetivos da sprint, no qual no final ficou: Fábio e Lucas Riboli em realizar a Especificação do Projeto; Victor e Lucas Silva realizarem a Documentação de Contexto; e o Gustavo em criar o esbosso de apresentação.
 ##### Evidências
 Criado todos os documentos planejados para a sprint, todos eles se localizam no teams do grupo.
-
-![Captura de tela dos documentos no teams](img/documentos-teams.png)
+|Imagem|Descrição|
+|------|---------|
+|![Captura de tela dos documentos no teams](img/documentos-teams.png)| Captura de tela dos documentos no Teams. |
 
 #### Sprint 2
 ##### Planejamento
@@ -44,10 +48,10 @@ Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface. Par
 No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto não houve grande planejamento e uma má distruibuição de tarefas. Ao final o Fábio e Lucas acabaram desempenhando um papel maior durante este sprint.
 ##### Evidências
 Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, incluido as relacionadas a wireframe e fluxo que usamos a ferramente Moqup.
-
-![Kanban projeto](img/kanban2.png)
-
-![Moqup projetos](img/evidenciamoqups.png)
+|Imagem|Descrição|
+|------|---------|
+|![Kanban projeto](img/kanban2.png)| Captura de tela do Kanban do projeto. |
+|![Moqup projetos](img/evidenciamoqups.png)| Captura de tela do wireframe feito no [Moqup](https://moqups.com/). |
   
 ### Ferramentas
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
