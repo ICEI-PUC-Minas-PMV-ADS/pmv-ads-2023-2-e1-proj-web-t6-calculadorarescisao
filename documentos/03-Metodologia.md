@@ -10,7 +10,7 @@ Com base na metodologia escolhida foi definida a divisão dos papéis da seguint
 - Product Owner: Victor Ornelas da Silva
 - Equipe de Desenvolvimento: **Fabio Vinícius Barkoski**, Gustavo Marques, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
 - Equipe de Design: Fabio Vinícius Barkoski, **Gustavo Marques**, Lucas Antonio Riboli, Lucas Santiago Plínio da Silva, Victor Ornelas da Silva
-- Equipe de Testes: Fabio Vinícius Barkoski, **Gustavo Marques**, Lucas Antonio Riboli, **Lucas Santiago Plínio da Silva**, Victor Ornelas da Silva
+- Equipe de Testes: Fabio Vinícius Barkoski, Gustavo Marques, Lucas Antonio Riboli, **Lucas Santiago Plínio da Silva**, Victor Ornelas da Silva
 
 ### Processo
 Como equipe optamos pelo GitHub Project para organizar nossas atividades de desenvolvimento de forma eficiente. Com ele teremos uma ótima maneira de distribuir tarefas e gerenciar sprints, deixando o processo transparente, colaborativo e eficaz. Para alcançar esses pontos, estruturamos o projeto da seguinte forma:
