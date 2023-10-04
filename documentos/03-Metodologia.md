@@ -69,6 +69,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Gerenciamento do Projeto            | [GitHub Projects](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/618) |
 | Hospedagem                          | GitHub Pages |
 |Criação de Interface de Projeto|[Moqup](https://moqups.com/)|
+|Comunicação do Time| Teams|
 
 
 ### Estratégia de Organização de Codificação 
