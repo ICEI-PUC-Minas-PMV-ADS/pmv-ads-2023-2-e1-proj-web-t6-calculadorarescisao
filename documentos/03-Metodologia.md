@@ -31,6 +31,13 @@ Valores a serem entregues no projetos:
 - Especificação do Projeto
 - Metodologia
 - Projeto de Interface
+- Template da aplicação
+- Programação de Funcionalidades
+- Plano de Testes de Software
+- Registro de Testes de Software
+- Hospedagem da Solução
+- Apresentação do Projeto
+- Vídeo de demonstração da solução
 
 #### Sprint 1
 ##### Planejamento
