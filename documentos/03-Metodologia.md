@@ -34,9 +34,9 @@ Valores a serem entregues no projetos:
 
 #### Sprint 1
 ##### Planejamento
-Para este sprint o objetivo é criar a Especificação do Projeto e a Documentação de Contexto, além de ter um esbosso de apresentação do projeto, utilizando apenas o Word e PowerPoint no Teams.
+Para esta sprint, o objetivo é criar a Especificação do Projeto e a Documentação de Contexto, além de ter um esboço de apresentação do projeto, utilizando apenas o Word e o PowerPoint no Teams.
 ##### Execução
-Separamos o grupo baseado em  cada um dos objetivos da sprint, no qual no final ficou: Fábio e Lucas Riboli em realizar a Especificação do Projeto; Victor e Lucas Silva realizarem a Documentação de Contexto; e o Gustavo em criar o esbosso de apresentação.
+Separamos o grupo com base em cada um dos objetivos da sprint, no qual, ao final, ficou assim: Fábio e Lucas Riboli para realizar a Especificação do Projeto; Victor e Lucas Silva para realizarem a Documentação de Contexto; e Gustavo para criar o esboço da apresentação. Após a criação do esboço, trabalhamos na formatação da apresentação para deixá-la mais apresentável e bem formatada.
 ##### Evidências
 Criado todos os documentos planejados para a sprint, todos eles se localizam no teams do grupo.
 |Imagem|Descrição|
@@ -45,15 +45,19 @@ Criado todos os documentos planejados para a sprint, todos eles se localizam no 
 
 #### Sprint 2
 ##### Planejamento
-Para este sprint o objetivo é criar a Metodologia e o Projeto de Interface. Para isso será utilizado a ferramenta [Moqup](https://moqups.com/).
+O planejamento para este sprint foi prosseguir com o projeto utilizando como referência as entregas da etapa. Em outras palavras, consistia em redigir um documento de Metodologia contendo informações sobre o gerenciamento do projeto, a divisão de papéis e os processos. Além da metodologia, a etapa demandava a criação de um projeto de interface, incluindo o fluxo de uso e o esboço das telas.
+
 ##### Execução
-No inicio o grupo separou os papeis do grupo, porém infelizmente a partir disto não houve grande planejamento e uma má distruibuição de tarefas. Ao final o Fábio e Lucas acabaram desempenhando um papel maior durante este sprint.
+No início, o grupo definiu os papéis dos membros, infelizmente, a partir disso, não houve um grande planejamento e houve má distribuição de tarefas, justificável por problemas de saúde e mudança de residência de dois integrantes da equipe. No final, Fábio e Lucas acabaram desempenhando um papel maior durante este sprint, escrevendo a metodologia diretamente no GitHub e criando o projeto de interface com a ferramenta [Moqup](https://moqups.com/). 
+
 ##### Evidências
-Ao fim da sprint, notamos que será necessário um melhor planejamento e organização da equipe. Porém todas as tarefas foram finalizadas, incluido as relacionadas a wireframe e fluxo que usamos a ferramente Moqup.
+Ao final da sprint, percebemos que será necessário um melhor planejamento e organização da equipe. No entanto, todas as tarefas foram concluídas, incluindo as relacionadas ao wireframe e fluxo que foram elaboradas com a ferramenta Moqup.
+Com a ideia de aprimorar nosso planejamento, criamos também uma reunião semanal para atualizarmos uns aos outros sobre o que está sendo realizado.
 |Imagem|Descrição|
 |------|---------|
 |![Kanban projeto](img/kanban2.png)| Captura de tela do Kanban do projeto. |
 |![Moqup projetos](img/evidenciamoqups.png)| Captura de tela do wireframe feito no [Moqup](https://moqups.com/). |
+|![Reuniao agendada semanalmente](img/reuniaoTeamsSemanal.png) | Captura de tela mostrando a reunião semanal criada no Teams
   
 ### Ferramentas
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
@@ -64,6 +68,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Documentos do projeto               | [GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-calculadorarescisao/tree/main/documentos) |
 | Gerenciamento do Projeto            | [GitHub Projects](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/618) |
 | Hospedagem                          | GitHub Pages |
+|Criação de Interface de Projeto|[Moqup](https://moqups.com/)|
 
 
 ### Estratégia de Organização de Codificação 
