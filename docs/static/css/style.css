@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#calculo input, select{
+    color: black;
+}
+
+#calculo input:focus, select:focus{
+  outline: solid 2px;
+  outline-color: #386ae8;
+}
+
+nav h1, p{
+  text-align: center;
+}
+
+#informacoes {
+  text-align: justify;
+}
+
+#h1-informacoes_titulo{
+  text-align: center;
+}
+
+.custom-submit-color {
+  background-color: #386ae8;
+  color: white;
+}
+
+.custom-form-color {
+  background-color: #386ae8;
+  color: white;
+}
+
+.backgroud-color-calculo {
+  background-color: #ffffff;
+}
+
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.horizontal-scroll div {
+  display: inline-block;
+  min-width: 300px;
+  height: 200px;
+  margin-right: 10px;
+
+}
+
+#cards {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    align-content: center;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#cards::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
