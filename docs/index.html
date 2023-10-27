@@ -1,65 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalculAi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="static/js/mask.js" defer></script>
 </head>
 
-<body>
-  <nav>
-    <h1>Calculai</h1>
-  </nav>
-  <div>
-    <div>
-      <p>AQUI VAI A EXPLICACAO, PODE SER OUTRO TIPO DE ELEMENTO </p>
+<body class="p-4 text-white">
+  <header class="flex items-center justify-center mb-12">
+    <nav class="flex-wrap bg-teal-500 p-6">
+      <div class="flex-shrink-0 text-black mr-6">
+        <h1 class="font-semibold text-xl tracking-tight">CalculAi</h1>
+        <p>Sua calculadora de rescisão :0</p>
+      </div>
+    </nav>
+  </header>
+  <div class="max-w-5xl mx-auto flex flex-col border rounded-md border-black-600/50 shadow-xl p-8 lg:flex-row">
+    <div class="w-full lg:w-1/2 p-4 text-black rounded">
+      <h1 id="h1-informacoes_titulo" class="text-lg"> Informações Úteis </h1>
+      <p id="informacoes" class="text-lg mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat, commodo erat sit amet,
+        scelerisque ligula.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat, commodo erat sit amet,
+        scelerisque ligula.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat, commodo erat sit amet,
+        scelerisque ligula.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat.
     </div>
-    <div>
-      <label for="salario">Salário</label>
-      <input type="text" name="salario" placeholder="salário">
-      <br>
-      <label for="dependentes">Dependentes</label>
-      <input type="number" name="dependentes" min="0" max="99" placeholder="dependentes">
-      <br>
-      <label for="motivo">Motivo</label>
-      <select name="motivo">
-        <option value="" selected></option>
-        <option value="justa-causa">Dispensa de justa causa</option>
-        <option value="sem-justa-causa">Dispensa sem justa causa</option>
-        <option value="pedido-demissao">Pedido de demissão</option>
-        <option value="demissao-comum-acordo">Demissão de comum acordo</option>
-        <option value="contrato-no-prazo">Encerramento de contrato de experiência no prazo</option>
-        <option value="contrato-antes-prazo">Encerramento de contrato de experiência antes do prazo</option>
-        <option value="aposentadoria">Aposentadoria do Empregado</option>
-        <option value="falecimento">Falecimento do Empregador</option>
-      </select>
-      <br>
-      <label for="dt-admissao">Data Admissão</label>
-      <input type="date" name="dt-admissao">
-      <br>
-      <label for="dt-demissao">Data Demissão</label>
-      <input type="date" name="dt-demissao">
-      <br>
-      <label for="aviso-previo">Aviso Prévio</label>
-      <select name="aviso-previo">
-        <option value="" selected></option>
-        <option value="trabalhado">Trabalhado</option>
-        <option value="dispensado">Dispensado</option>
-        <option value="indenizado">Indenizado pelo Empregador</option>
-        <option value="nao-cumprido">Não cumprido pelo Empregado</option>
-      </select>
-      <br>
-      <label for="ferias-vencidas">Férias Vencidas</label>
-      <select name="ferias-vencidas">
-        <option value="" selected></option>
-        <option value="sim">Sim</option>
-        <option value="nao">Não</option>
-      </select>
-      <br>
-      <button type="calculoModalidade()">Calcular</button>
-      <script src="functions/index.js"></script>
+    <div id="calculo" class="w-full lg:w-1/2 p-4 backgroud-color-calculo w-2/5 p-8 rounded">
+      <form>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="mb-4">
+            <label for="salario" class="block text-sm font-medium text-black">Sálario Bruto</label>
+            <input type="text" id="salario" name="salario" class="mt-1 p-2 block w-full rounded-lg"
+              pattern="^(R\$\s*)?\d+(\.\d{2})?$" placeholder="100.00" title="Salário bruto mensal" required>
+          </div>
+          <div class="mb-4">
+            <label for="dependentes" class="block text-sm font-medium text-black">Dependentes</label>
+            <input type="number" id="dependentes" name="dependentes" class="mt-1 p-2 block w-full rounded-lg" step="1"
+              pattern="\d+" min="0" max="99" placeholder="0" title="Número de dependentes" required>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="motivo" class="block text-sm font-medium text-black">Motivo</label>
+          <select id="motivo" name="motivo" class="mt-1 p-2 block w-full rounded-lg" required>
+            <option value="justa-causa">Dispensa de justa causa</option>
+            <option value="sem-justa-causa">Dispensa sem justa causa</option>
+            <option value="pedido-demissao">Pedido de demissão</option>
+            <option value="demissao-comum-acordo">Demissão de comum acordo</option>
+            <option value="contrato-no-prazo">Encerramento de contrato de experiência no prazo</option>
+            <option value="contrato-antes-prazo">Encerramento de contrato de experiência antes do prazo</option>
+            <option value="aposentadoria">Aposentadoria do Empregado</option>
+            <option value="falecimento">Falecimento do Empregador</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label for="startDate" class="block text-sm font-medium text-black">Data Admissão</label>
+            <input type="text" id="dtAdmissao" name="startDate" class="mt-1 p-2 block w-full rounded-lg" maxlength="10"
+              placeholder="DD/MM/YYYY" pattern="\d{2}\/\d{2}\/\d{4}" required>
+          </div>
+          <div>
+            <label for="dtDemissao" class="block text-sm font-medium text-black">Data Demissão</label>
+            <input type="text" id="dtDemissao" name="dtDemissao" class="mt-1 p-2 block w-full rounded-lg" maxlength="10"
+              placeholder="DD/MM/YYYY" pattern="\d{2}\/\d{2}\/\d{4}" required>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label for="avisoPrevio" class="block text-sm font-medium text-black">Aviso Prévio</label>
+            <select id="avisoPrevio" name="avisoPrevio" class="mt-1 p-2 block w-full rounded-lg" required>
+              <option value="trabalhado">Trabalhado</option>
+              <option value="dispensado">Dispensado</option>
+              <option value="indenizado">Indenizado pelo Empregador</option>
+              <option value="nao-cumprido">Não cumprido pelo Empregado</option>
+            </select>
+          </div>
+          <div>
+            <label for="feriasVencidas" class="block text-sm font-medium text-black">Férias Vencidas</label>
+            <select id="feriasVencidas" name="feriasVencidas" class="mt-1 p-2 block w-full rounded-lg" required>
+              <option value="option1">Sim</option>
+              <option value="option2">Não</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <button type="submit" class="custom-submit-color px-4 py-2 block w-full text-black rounded-md">Enviar</button>
+        </div>
+      </form>
     </div>
   </div>
+  <div id="cards" class="flex overflow-x-auto mt-12">
+    <div class="inline-flex space-x-8 h-72">
+      <div class="w-96 h-64 shadow-lg hover:shadow-xl">
+        <div class="bg-blue-500 rounded-t-lg">
+          <time datetime="2023-10-24">24/10/2023</time>
+        </div>
+        <div class="text-black">
+          <p>texto</p>
+        </div>
+      </div>
+      <div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
+        <p class="text-black">texto</p>
+      </div>
+      <div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
+        <p class="text-black">texto</p>
+      </div>
+      <div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
+        <p class="text-black">texto</p>
+      </div>
+      <div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
+        <p class="text-black">texto</p>
+      </div>
+    </div>
+
+  </div>
+  <footer class="mt-14 text-black">
+    <p> 2023 CalculAi&copy;</p>
+  </footer>
 </body>
 
 </html>
