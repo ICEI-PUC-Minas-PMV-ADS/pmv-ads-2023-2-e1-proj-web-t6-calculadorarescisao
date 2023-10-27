@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
-  </head>
-  <body>
-    <nav>
-      <h1>Calculai</h1>
-    </nav>
-    <div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body>
+  <nav>
+    <h1>Calculai</h1>
+  </nav>
+  <div>
     <div>
       <p>AQUI VAI A EXPLICACAO, PODE SER OUTRO TIPO DE ELEMENTO </p>
     </div>
-      <div>
-        <label for="salario">Salário</label>
-        <input type="text" name="salario" placeholder="salário">
-        <br>
-        <label for="dependentes">Dependentes</label>
-        <input type="number" name="dependentes" min="0" max="99" placeholder="dependentes">
-        <br>
-        <label for="motivo">Motivo</label>
-        <select name="motivo">
-          <option value="" selected></option>
-          <option value="justa-causa">Dispensa de justa causa</option>
-          <option value="sem-justa-causa">Dispensa sem justa causa</option>
-          <option value="pedido-demissao">Pedido de demissão</option>
-          <option value="demissao-comum-acordo">Demissão de comum acordo</option>
-          <option value="contrato-no-prazo">Encerramento de contrato de experiência no prazo</option>
-          <option value="contrato-antes-prazo">Encerramento de contrato de experiência antes do prazo</option>
-          <option value="aposentadoria">Aposentadoria do Empregado</option>
-          <option value="falecimento">Falecimento do Empregador</option>
-        </select>
-        <br>
-        <label for="dt-admissao">Data Admissão</label>
-        <input type="date" name="dt-admissao">
-        <br>
-        <label for="dt-demissao">Data Demissão</label>
-        <input type="date" name="dt-demissao">
-        <br>
-        <label for="aviso-previo">Aviso Prévio</label>
-        <select name="aviso-previo">
-          <option value="" selected></option>
-          <option value="trabalhado">Trabalhado</option>
-          <option value="dispensado">Dispensado</option>
-          <option value="indenizado">Indenizado pelo Empregador</option>
-          <option value="nao-cumprido">Não cumprido pelo Empregado</option>
-        </select>
-        <br>
-        <label for="ferias-vencidas">Férias Vencidas</label>
-        <select name="ferias-vencidas">
-          <option value="" selected></option>
-          <option value="sim">Sim</option>
-          <option value="nao">Não</option>
-        </select>
-        <br>
-        <button type="submit">Calcular</button>
-      </div>
+    <div>
+      <label for="salario">Salário</label>
+      <input type="text" name="salario" placeholder="salário">
+      <br>
+      <label for="dependentes">Dependentes</label>
+      <input type="number" name="dependentes" min="0" max="99" placeholder="dependentes">
+      <br>
+      <label for="motivo">Motivo</label>
+      <select name="motivo">
+        <option value="" selected></option>
+        <option value="justa-causa">Dispensa de justa causa</option>
+        <option value="sem-justa-causa">Dispensa sem justa causa</option>
+        <option value="pedido-demissao">Pedido de demissão</option>
+        <option value="demissao-comum-acordo">Demissão de comum acordo</option>
+        <option value="contrato-no-prazo">Encerramento de contrato de experiência no prazo</option>
+        <option value="contrato-antes-prazo">Encerramento de contrato de experiência antes do prazo</option>
+        <option value="aposentadoria">Aposentadoria do Empregado</option>
+        <option value="falecimento">Falecimento do Empregador</option>
+      </select>
+      <br>
+      <label for="dt-admissao">Data Admissão</label>
+      <input type="date" name="dt-admissao">
+      <br>
+      <label for="dt-demissao">Data Demissão</label>
+      <input type="date" name="dt-demissao">
+      <br>
+      <label for="aviso-previo">Aviso Prévio</label>
+      <select name="aviso-previo">
+        <option value="" selected></option>
+        <option value="trabalhado">Trabalhado</option>
+        <option value="dispensado">Dispensado</option>
+        <option value="indenizado">Indenizado pelo Empregador</option>
+        <option value="nao-cumprido">Não cumprido pelo Empregado</option>
+      </select>
+      <br>
+      <label for="ferias-vencidas">Férias Vencidas</label>
+      <select name="ferias-vencidas">
+        <option value="" selected></option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+      <br>
+      <button type="calculoModalidade()">Calcular</button>
+      <script src="functions/index.js"></script>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
