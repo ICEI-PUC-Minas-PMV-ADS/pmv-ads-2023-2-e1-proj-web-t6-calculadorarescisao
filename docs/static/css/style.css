@@ -11,8 +11,9 @@ body {
   outline-color: #386ae8;
 }
 
-nav h1, p{
+nav h2{
   text-align: center;
+  font-size: 14pt;
 }
 
 #informacoes {
@@ -60,4 +61,8 @@ nav h1, p{
 
 #cards::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+}
+
+footer{
+  text-align: center;
 }
