@@ -7,15 +7,16 @@
   <title>CalculAi</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
-  <script src="static/js/mask.js" defer></script>
+  <script src="static/js/masks.js" defer></script>
+  <script src="static/js/calculus.js" defer></script>
 </head>
 
 <body class="p-4 text-white">
   <header class="flex items-center justify-center mb-12">
     <nav class="flex-wrap bg-teal-500 p-6">
       <div class="flex-shrink-0 text-black mr-6">
-        <h1 class="font-semibold text-xl tracking-tight">CalculAi</h1>
-        <p>Sua calculadora de rescisão :0</p>
+        <img src="static/img/logo.png" alt="">
+        <h2>Sua calculadora de rescisão</p>
       </div>
     </nav>
   </header>
@@ -32,7 +33,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat.
     </div>
     <div id="calculo" class="w-full lg:w-1/2 p-4 backgroud-color-calculo w-2/5 p-8 rounded">
-      <form>
+      <form id="formCalculo">
         <div class="grid grid-cols-2 gap-4">
           <div class="mb-4">
             <label for="salario" class="block text-sm font-medium text-black">Sálario Bruto</label>
@@ -93,7 +94,7 @@
         </div>
 
         <div class="mt-6">
-          <button type="submit" class="custom-submit-color px-4 py-2 block w-full text-black rounded-md">Enviar</button>
+          <button type="submit" id="submitButton" class="custom-submit-color px-4 py-2 block w-full text-black rounded-md">Enviar</button>
         </div>
       </form>
     </div>
