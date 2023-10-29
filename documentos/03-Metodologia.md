@@ -65,7 +65,34 @@ Com a ideia de aprimorar nosso planejamento, criamos também uma reunião semana
 |![Kanban projeto](img/kanban2.png)| Captura de tela do Kanban do projeto. |
 |![Moqup projetos](img/evidenciamoqups.png)| Captura de tela do wireframe feito no [Moqup](https://moqups.com/). |
 |![Reuniao agendada semanalmente](img/reuniaoTeamsSemanal.png) | Captura de tela mostrando a reunião semanal criada no Teams
-  
+
+#### Sprint 3
+##### Planejamento
+O planejamento para este sprint foi prosseguir com o projeto utilizando como referência as entregas da etapa. Basicamente buscamos codifica o que foi apresentado na sprint passada, ou seja, aplicar o que foi pensado para o template além de tentar criar um estilo para o projeto que se destacasse do que já existe, com um identidade visual diferente.
+Planejamos também iniciar e algumas funcionalidades de nossa aplicação, para que assim seja possivel já iniciar os primeiros fluxos do site.
+
+##### Execução
+Observando nossa dificuldade em gerenciar o tempo e as ações relacionadas ao projeto, na sprint passada implementamos uma agenda semanal que engloba todos os membros. O objetivo é discutir o progresso da semana anterior e planejar as atividades das próximas semanas. Além disso, intensificamos a comunicação através do WhatsApp.
+
+Acontecimentos em cada uma de nossas reuniões:
+
+5 de outubro - Durante nossa primeira reunião recorrente, estabelecemos diretrizes para aprimorar a concepção de nosso projeto. Iniciamos uma discussão aprofundada sobre o design de nosso site.
+
+12 de outubro - Devido ao feriado nesse dia, não realizamos a reunião presencial. No entanto, através do WhatsApp, decidimos prosseguir com o desenvolvimento do site.
+
+19 de outubro - Nesta reunião, além de realizarmos uma revisão sobre a utilização de JavaScript e CSS, abordamos questões relacionadas à gestão do tempo e do trabalho. Definimos estratégias para direcionar nossos esforços na construção do site. Além disso, Gustavo, com sua experiência em Recursos Humanos, trouxe uma nova perspectiva sobre cálculos em colaboração com seus colegas.
+
+26 de outubro - Discutimos como organizar os cálculos e como apresentá-los. Abordamos possíveis alterações na interface e Victor compartilhou sua visão abrangente sobre o escopo dos cálculos.
+
+Entre as reuniões, Fabio e Lucas se concentraram principalmente no desenvolvimento do front-end, trabalhando com HTML e CSS, e contribuindo na revisão de solicitações de pull requests, bem como no aprimoramento do entendimento dos cálculos por meio de JavaScript e lógica. 
+
+##### Evidências
+Ao final dessa sprint notamos que conseguimos conrrigir alguns problemas da sprint anterior, porém ainda sim temos mais o que melhorar em questão de organização.
+A respeito das entregas, conseguimos atingir o que se esperava, além de mudarmos algumas ideias inicias para criações mais maduras.
+|Imagem|Descrição|
+|------|---------|
+|![Style Guide](img/StyleGuide.png)| Style Guide de nosso Site |
+
 ### Ferramentas
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
