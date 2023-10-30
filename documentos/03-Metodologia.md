@@ -78,13 +78,13 @@ Acontecimentos em cada uma de nossas reuniões:
 
 5 de outubro - Durante nossa primeira reunião recorrente, estabelecemos diretrizes para aprimorar a concepção de nosso projeto. Iniciamos uma discussão aprofundada sobre o design de nosso site.
 
-12 de outubro - Devido ao feriado nesse dia, não realizamos a reunião presencial. No entanto, através do WhatsApp, decidimos prosseguir com o desenvolvimento do site.
+12 de outubro - Devido ao feriado nesse dia, não realizamos a reunião. No entanto, através do WhatsApp, decidimos prosseguir com o desenvolvimento do site.
 
 19 de outubro - Nesta reunião, além de realizarmos uma revisão sobre a utilização de JavaScript e CSS, abordamos questões relacionadas à gestão do tempo e do trabalho. Definimos estratégias para direcionar nossos esforços na construção do site. Além disso, Gustavo, com sua experiência em Recursos Humanos, trouxe uma nova perspectiva sobre cálculos em colaboração com seus colegas.
 
 26 de outubro - Discutimos como organizar os cálculos e como apresentá-los. Abordamos possíveis alterações na interface e Victor compartilhou sua visão abrangente sobre o escopo dos cálculos.
 
-Entre as reuniões, Fabio e Lucas se concentraram principalmente no desenvolvimento do front-end, trabalhando com HTML e CSS, e contribuindo na revisão de solicitações de pull requests, bem como no aprimoramento do entendimento dos cálculos por meio de JavaScript e lógica. 
+Entre as reuniões, Fabio e Lucas Riboli se concentraram principalmente no desenvolvimento do front-end, trabalhando com HTML e CSS, e contribuindo na revisão de solicitações de pull requests, bem como no aprimoramento do entendimento dos cálculos por meio de JavaScript e lógica. 
 
 ##### Evidências
 Ao final dessa sprint notamos que conseguimos conrrigir alguns problemas da sprint anterior, porém ainda sim temos mais o que melhorar em questão de organização.
