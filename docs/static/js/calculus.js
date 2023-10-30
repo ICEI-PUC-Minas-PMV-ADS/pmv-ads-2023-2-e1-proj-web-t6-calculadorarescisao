@@ -1,18 +1,28 @@
-document.getElementByTagName("form")[0].addEventListener("submit", (event) => {
-  const valores = event.target
+document.getElementById("formCalculo").addEventListener("submit", (event) => {
+  event.preventDefault();
   
-  const salario = valores[0]
-  const dependentes = valores[1]
-  const motivo = valores[2]
-  const dataAdmissao = valores[3]
-  const dataDemissao = valores[4]
-  const avisoPrevio = valores[5]
-  const ferias = valores[6]
+  let salario = document.getElementById("salario").value;
+  let dependentes = document.getElementById("dependentes").value;
+  let motivo = document.getElementById("motivo").value;
+  let dataAdmissao = document.getElementById("dtAdmissao").value;
+  let dataRecisao = document.getElementById("dtDemissao").value;
+  let AvisoPrevio = document.getElementById("avisoPrevio").value;
+  let temFeriasVencidas = document.getElementById("feriasVencidas").value;
+
+  let tercoSalario = salario/3
+  let saldoFerias = feriasVencidas(salario, tercoSalario, temFeriasVencidas)
+  
+  let diasTrabalhadosMes = parseInt(dataRecisao.split('/')[0])
+  let diasTrabalhadosTotal = DiasTrabalhados(dataAdmissao, dataRecisao)
+  let saldoSalario = (salario/30) * diasTrabalhadosMes
+
 
   switch (motivo) {
     case "justa-causa":
-      const recisaoJustaCausa = ferias + saldoSalario;
-      return recisaoJustaCausa;
+      let resultado = saldoFerias + saldoSalario;
+      let recisaoJustaCausa = formatarValorMonetario(resultado);
+      document.getElementById("informacoes").textContent = "O valor de sua rescisão será de " + recisaoJustaCausa;
+      break
     case "pedido-demissao":
       const recisaoPedidoDemissao = ferias + decimoTerceiro + saldoSalario;
       return recisaoPedidoDemissao;
@@ -45,3 +55,34 @@ document.getElementByTagName("form")[0].addEventListener("submit", (event) => {
   }
 
 });
+
+function DiasTrabalhados(dataAdmissao, dataDemissao){
+  const [diaA, mesA, anoA] = dataAdmissao.split('/').map(Number)
+  const [diaD, mesD, anoD] = dataDemissao.split('/').map(Number)
+  
+  const jsMonthA = mesA - 1;
+  const jsMonthD = mesD - 1;
+  
+  let dtAdmissao = new Date(anoA, jsMonthA, diaA)
+  let dtDemissao = new Date(anoD, jsMonthD, diaD)
+  
+  let diferencaMilli = dtDemissao - dtAdmissao
+  let difDias = diferencaMilli / (1000 * 60 * 60 * 24)
+  return difDias
+}
+
+function feriasVencidas(salario, tercoSalario, ferias){
+  if (ferias == 'Sim'){
+      return salario + tercoSalario
+  } else {
+      return 0
+  }
+}
+
+function formatarValorMonetario(numero) {
+  const options = {
+    style: 'currency',
+    currency: 'BRL'
+  };
+  return numero.toLocaleString('pt-BR', options);
+}
