@@ -1,3 +1,18 @@
+mes = {
+  Jan: "Janeiro",
+  Feb: "Fevereiro",
+  Mar: "Março",
+  Apr: "Abril",
+  May: "Maio",
+  Jun: "Junho",
+  Jul: "Julho",
+  Aug: "Agosto",
+  Sep: "Setembro",
+  Oct: "Outubro",
+  Nov: "Novembro",
+  Dez: "Dezembro",
+}
+
 document.getElementById("formCalculo").addEventListener("submit", (event) => {
   event.preventDefault();
   
@@ -16,13 +31,14 @@ document.getElementById("formCalculo").addEventListener("submit", (event) => {
   let diasTrabalhadosTotal = DiasTrabalhados(dataAdmissao, dataRecisao)
   let saldoSalario = (salario/30) * diasTrabalhadosMes
 
+  let resultado = 0;
 
   switch (motivo) {
     case "justa-causa":
-      let resultado = saldoFerias + saldoSalario;
+      resultado = saldoFerias + saldoSalario;
       let recisaoJustaCausa = formatarValorMonetario(resultado);
       document.getElementById("informacoes").textContent = "O valor de sua rescisão será de " + recisaoJustaCausa;
-      break
+      break;
     case "pedido-demissao":
       const recisaoPedidoDemissao = ferias + decimoTerceiro + saldoSalario;
       return recisaoPedidoDemissao;
@@ -51,9 +67,24 @@ document.getElementById("formCalculo").addEventListener("submit", (event) => {
       return recisaoSemJustaCausa;
 
     default:
-      return "nao existe";
+      document.getElementById("informacoes").textContent = "nao existe";
   }
 
+  if (!localStorage.getItem("calculos")){
+    localStorage.setItem("calculos", JSON.stringify({valores: []}))
+  }
+
+  let calculos = JSON.parse(localStorage.getItem("calculos"))
+  const dataCalculo = new Date();
+
+  calculos.valores.push({
+          data: dataCalculo.toDateString(),
+          valor: formatarValorMonetario(resultado),
+          motivo: motivo,
+      })
+
+  localStorage.setItem("calculos", JSON.stringify(calculos))
+  saveResult()
 });
 
 function DiasTrabalhados(dataAdmissao, dataDemissao){
@@ -86,3 +117,36 @@ function formatarValorMonetario(numero) {
   };
   return numero.toLocaleString('pt-BR', options);
 }
+
+function dateFormatter(date) {
+  const arrayDate = date.split(" ")
+  return `${arrayDate[2]} de ${mes[arrayDate[1]]}, ${arrayDate[3]}`
+}
+
+function showValue(value) {
+  document.getElementById("informacoes").textContent = `O valor de sua rescisão será de ${value}`;
+}
+
+function saveResult() {
+  if (localStorage.getItem("calculos")){
+    const calculos = JSON.parse(localStorage.getItem("calculos"));
+    const cards = document.getElementById("cards");
+
+    calculos.valores.forEach(element => {
+      cards.children[0].innerHTML+=`
+        <div class="w-96 h-64 shadow-lg hover:shadow-xl" onclick=showValue("${element.valor}")>
+          <div class="historico-data bg-blue-500 rounded-t-lg">
+            <time datetime="2023-10-24">${dateFormatter(element.data)}</time>
+          </div>
+          <div class="text-black">
+            <p>Resultado: ${element.valor}</p>
+            <br>
+            <p>Motivo: ${element.motivo}</p>
+          </div>
+        </div>
+        `
+    });
+  }
+}
+
+saveResult()
