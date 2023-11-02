@@ -2,43 +2,38 @@
 
 Implementação da aplicação descritas por meio dos requisitos codificados. 
 
-[Utilize a estrutura abaixo para cada funcionalidade entregue na etapa]
+### Cálculo de dispensa de justa causa
 
-### Título da funcionalidade
+#### Responsáveis
 
-[Adicione imagem da funcionalidade/tela]
+Fábio Vinícius Barkoski, Gustavo Marques Pereira, Lucas Antonio Riboli, Victor Ornelas da Silva
+
+|Imagem|Descrição|
+|------|---------|
+| ![Captura de tela](img/justa-causa.png) | Captura de tela do cálculo de dispensa de justa causa |
 
 
 #### Requisito atendido
 
-[RF-X: adicione a descrição do requisito atendido]
+RF-01: A aplicação deverá realizar o cálculo de dispensas de justa causa.
 
 
 #### Artefatos da funcionalidade
 
-[Adicione os nomes dos arquivos relacionados ao desenvolvimento da funcionalidade]
+- index.html
+- style.css
+- calculus.js
+- masks.js
 
+<!--#### Estrutura de Dados
 
-#### Estrutura de Dados
-
-[Caso exista estrutura de dados, adicione aqui]
+[Caso exista estrutura de dados, adicione aqui]-->
 
 
 #### Instruções de acesso
 
-[Adicione as orientações de acesso à funcionalidade]
+Abra um navegador de Internet e clique [aqui](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t6-calculadorarescisao/)
+para abrir a página do cálculo.
 
-
-#### Responsável
-
-[Adicione nome do responsável pelo desenvolvimento da funcionalidade]
-
-
-
-
-> **Links Úteis**:
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
-
+Ao abrir selecione o motivo "Dispensa de justa causa" e preencha o resto dos campos conforme desejar, em seguida clique em "Enviar" e
+o resultado aparecerá ao lado, bem como será salvo no histórico de cálculos.
