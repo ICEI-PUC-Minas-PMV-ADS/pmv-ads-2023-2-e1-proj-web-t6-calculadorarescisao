@@ -1,4 +1,4 @@
-mes = {
+const mes = {
   Jan: "Janeiro",
   Feb: "Fevereiro",
   Mar: "Março",
@@ -13,31 +13,15 @@ mes = {
   Dez: "Dezembro",
 }
 
-document.getElementById("formCalculo").addEventListener("submit", (event) => {
+const formCalculo = document.getElementById("formCalculo");
+formCalculo.addEventListener("submit", (event) => {
   event.preventDefault();
-  
-  let salario = document.getElementById("salario").value;
-  let dependentes = document.getElementById("dependentes").value;
-  let motivo = document.getElementById("motivo").value;
-  let dataAdmissao = document.getElementById("dtAdmissao").value;
-  let dataRecisao = document.getElementById("dtDemissao").value;
-  let AvisoPrevio = document.getElementById("avisoPrevio").value;
-  let temFeriasVencidas = document.getElementById("feriasVencidas").value;
-
-  let tercoSalario = salario/3
-  let saldoFerias = feriasVencidas(salario, tercoSalario, temFeriasVencidas)
-  
-  let diasTrabalhadosMes = parseInt(dataRecisao.split('/')[0])
-  let diasTrabalhadosTotal = DiasTrabalhados(dataAdmissao, dataRecisao)
-  let saldoSalario = (salario/30) * diasTrabalhadosMes
-
   let resultado = 0;
-
+  const data = new FormData(formCalculo);
+  let motivo = data.get('motivo');
   switch (motivo) {
     case "justa-causa":
-      resultado = saldoFerias + saldoSalario;
-      let recisaoJustaCausa = formatarValorMonetario(resultado);
-      document.getElementById("informacoes").textContent = "O valor de sua rescisão será de " + recisaoJustaCausa;
+      justaCausa(data);
       break;
     case "pedido-demissao":
       const recisaoPedidoDemissao = ferias + decimoTerceiro + saldoSalario;
@@ -70,45 +54,22 @@ document.getElementById("formCalculo").addEventListener("submit", (event) => {
       document.getElementById("informacoes").textContent = "nao existe";
   }
 
-  if (!localStorage.getItem("calculos")){
-    localStorage.setItem("calculos", JSON.stringify({valores: []}))
+  if (!localStorage.getItem("calculos")) {
+    localStorage.setItem("calculos", JSON.stringify({ valores: [] }))
   }
 
   let calculos = JSON.parse(localStorage.getItem("calculos"))
   const dataCalculo = new Date();
 
   calculos.valores.push({
-          data: dataCalculo.toDateString(),
-          valor: formatarValorMonetario(resultado),
-          motivo: motivo,
-      })
+    data: dataCalculo.toDateString(),
+    valor: formatarValorMonetario(resultado),
+    motivo: motivo,
+  })
 
   localStorage.setItem("calculos", JSON.stringify(calculos))
   saveResult()
 });
-
-function DiasTrabalhados(dataAdmissao, dataDemissao){
-  const [diaA, mesA, anoA] = dataAdmissao.split('/').map(Number)
-  const [diaD, mesD, anoD] = dataDemissao.split('/').map(Number)
-  
-  const jsMonthA = mesA - 1;
-  const jsMonthD = mesD - 1;
-  
-  let dtAdmissao = new Date(anoA, jsMonthA, diaA)
-  let dtDemissao = new Date(anoD, jsMonthD, diaD)
-  
-  let diferencaMilli = dtDemissao - dtAdmissao
-  let difDias = diferencaMilli / (1000 * 60 * 60 * 24)
-  return difDias
-}
-
-function feriasVencidas(salario, tercoSalario, ferias){
-  if (ferias == 'Sim'){
-      return salario + tercoSalario
-  } else {
-      return 0
-  }
-}
 
 function formatarValorMonetario(numero) {
   const options = {
@@ -128,12 +89,12 @@ function showValue(value) {
 }
 
 function saveResult() {
-  if (localStorage.getItem("calculos")){
+  if (localStorage.getItem("calculos")) {
     const calculos = JSON.parse(localStorage.getItem("calculos"));
     const cards = document.getElementById("cards");
 
     calculos.valores.forEach(element => {
-      cards.children[0].innerHTML+=`
+      cards.children[0].innerHTML += `
         <div class="w-96 h-64 shadow-lg hover:shadow-xl" onclick=showValue("${element.valor}")>
           <div class="historico-data bg-blue-500 rounded-t-lg">
             <time datetime="2023-10-24">${dateFormatter(element.data)}</time>
@@ -147,6 +108,66 @@ function saveResult() {
         `
     });
   }
+}
+
+function justaCausa(data) {
+  let salario = parseFloat(data.get('salario'));
+  let dataRecisao = data.get('dtDemissao');
+  let temFeriasVencidas = data.get('feriasVencidas');
+  let ferias = 0;
+  let saldoSalario = (salario / 30) * dataRecisao.split("/")[0];
+
+  if (temFeriasVencidas == "Sim") {
+    ferias = salario;
+    tercoFerias = saldoSalario;
+  }
+  let totalRescisao = saldoSalario + ferias + tercoFerias;
+  let valoresRescicao = {
+    Saldo_Salario: saldoSalario,
+    Ferias: ferias,
+    Terco_Ferias: tercoFerias,
+    Total_Rescisao: totalRescisao
+  }
+
+  adicionarTabelaRescisao(valoresRescicao)
+
+};
+
+function adicionarTabelaRescisao(valoresRescicao) {
+
+  const divResultado = document.getElementById("divInfo");
+  if (document.getElementById("table-resultado")) {
+    document.getElementById("divInfo").removeChild(document.getElementById("table-resultado"))
+  }
+  const tabela = document.createElement("table");
+  tabela.className = "w-full table-auto bg-white shadow-md rounded-lg table-custom";
+  tabela.id = "table-resultado"
+  const thead = document.createElement("thead");
+  thead.innerHTML = `
+  <tr>
+    <th class="px-4 py-2 bg-gray-200 text-gray-700">Descrição</th>
+    <th class="px-4 py-2 bg-gray-200 text-gray-700">Valor (R$)</th>
+  </tr>
+  `;
+
+  const tbody = document.createElement("tbody");
+
+  for (var item in valoresRescicao) {
+    const novaLinha = document.createElement("tr");
+    novaLinha.innerHTML = `
+    <td class="border px-4 py-2">${item.replace("_", " ")}</td>
+    <td class="border px-4 py-2">${formatarValorMonetario(valoresRescicao[item])}</td>
+  `;
+
+    tbody.appendChild(novaLinha);
+  };
+
+  tabela.appendChild(thead);
+  tabela.appendChild(tbody);
+  if (document.getElementById("informacoes")) {
+    divResultado.removeChild(document.getElementById("informacoes"))
+  }
+  divResultado.appendChild(tabela);
 }
 
 saveResult()
