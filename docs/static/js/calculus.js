@@ -115,6 +115,7 @@ function justaCausa(data) {
   let dataRecisao = data.get('dtDemissao');
   let temFeriasVencidas = data.get('feriasVencidas');
   let ferias = 0;
+  let tercoFerias = 0;
   let saldoSalario = (salario / 30) * dataRecisao.split("/")[0];
 
   if (temFeriasVencidas == "Sim") {
