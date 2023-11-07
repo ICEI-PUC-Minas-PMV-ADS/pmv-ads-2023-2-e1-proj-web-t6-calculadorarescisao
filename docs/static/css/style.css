@@ -70,3 +70,19 @@ nav h2{
 footer{
   text-align: center;
 }
+
+.table-custom {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.table-custom th {
+  background-color: #386ae8;
+  color: #fff;
+}
+
+.table-custom th,
+.table-custom td {
+  padding: 10px;
+  text-align: center;
+}
