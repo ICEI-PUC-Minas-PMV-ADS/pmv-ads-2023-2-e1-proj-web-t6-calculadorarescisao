@@ -1,27 +1,105 @@
-const mes = {
-  Jan: "Janeiro",
-  Feb: "Fevereiro",
-  Mar: "Março",
-  Apr: "Abril",
-  May: "Maio",
-  Jun: "Junho",
-  Jul: "Julho",
-  Aug: "Agosto",
-  Sep: "Setembro",
-  Oct: "Outubro",
-  Nov: "Novembro",
-  Dez: "Dezembro",
+import { showOnHistory } from "./history.js";
+
+const nomenclatura = {
+  verbas: "Verbas Rescisórias",
+  deducoes: "Deduções",
+  fgts: "FGTS",
+  rescisao: "Total Rescisão",
+  saldoSalario: "Saldo de Salário",
+  feriasVencidas: "Férias Vencidas",
+  feriasProps: "Férias Proporcionais",
+  decimoTerceiro: "13° proporcional ",
+  tercoFerias: "1/3 das Férias",
+  inss: "INSS",
+  inssDecimo: "INSS 13°",
+  irrf: "IRRF",
+  depositado: "Depositado",
+  multa: "Multa"
 }
 
 const formCalculo = document.getElementById("formCalculo");
 formCalculo.addEventListener("submit", (event) => {
   event.preventDefault();
-  let resultado = 0;
   const data = new FormData(formCalculo);
-  let motivo = data.get('motivo');
+  const motivo = data.get('motivo');
+  const aviso = data.get('avisoPrevio');
+  const salario = parseFloat(data.get('salario'));
+  const dataAdmissao = new Date(formataData(data.get('dtAdmissao')));
+  const dataRecisao = new Date(formataData(data.get('dtDemissao')));
+  const temFeriasVencidas = data.get('feriasVencidas');
+  let feriasVencidas = 0;
+ 
+  let avisoValor = 0;
+  switch (aviso){
+    case "indenizado":
+    case "nao-cumprido":
+      let diasAviso = 30 + (dataRecisao.getFullYear() - dataAdmissao.getFullYear()) * 3;
+      if (diasAviso > 60) diasAviso = 60;
+      avisoValor = diasAviso * (salario/30);
+      break;
+    case "trabalhado":
+    case "dispensado":
+    default:
+      break;
+  }
+
+  // verbas rescisorias
+  const saldoSalario = (salario / 30) * dataRecisao.getDate();
+  const decimoTerceiro = calcDecimoTerceiro(salario, dataAdmissao, dataRecisao);
+  const feriasProps = decimoTerceiro;
+
+  if (temFeriasVencidas == "Sim") {
+    feriasVencidas = salario;
+  }
+  const tercoFerias = (feriasVencidas + feriasProps)/3;
+
+  // deducoes
+  const inss = saldoSalario * 0.075;
+  const inssDecimo = decimoTerceiro * 0.076;
+  const irrf = saldoSalario * 0.00;
+
+  // fgts
+  const contribuicao = salario * 0.08;
+  const meses = mesesDiferenca(dataAdmissao, dataRecisao);
+  const depositado = contribuicao * meses;
+  const saldoSalarioFgts = (contribuicao/30) * dataRecisao.getDate();
+  const decimoTerceiroFgts = calcDecimoTerceiro(contribuicao, dataAdmissao, dataRecisao);
+  const multa = depositado * 0.4;
+
+  let verbasRescisorias = (aviso === "indenizado")? avisoValor : 0;
+  let deducoes = (aviso === "nao-cumprido")? avisoValor: 0;
+  let fgts = 0;
+  let totalRescisao = 0;
   switch (motivo) {
     case "justa-causa":
-      justaCausa(data);
+      verbasRescisorias = verbasRescisorias + saldoSalario + feriasVencidas
+        + feriasProps + tercoFerias + decimoTerceiro;
+      deducoes = deducoes + inss + inssDecimo + irrf;
+      totalRescisao = verbasRescisorias - deducoes;
+      adicionarTabelaRescisao({
+          verbas: {
+            saldoSalario: saldoSalario,
+            feriasVencidas: feriasVencidas,
+            feriasProps: feriasProps,
+            decimoTerceiro: decimoTerceiro,
+            tercoFerias: tercoFerias,
+            total: verbasRescisorias
+          },
+          deducoes: {
+            inss: inss,
+            inssDecimo: inssDecimo,
+            irrf: irrf,
+            total: deducoes
+          },
+          fgts: {
+            depositado: depositado,
+            multa: multa,
+            total: fgts
+          },
+          rescisao: {
+            total: totalRescisao,
+          },
+        })
       break;
     case "pedido-demissao":
       const recisaoPedidoDemissao = ferias + decimoTerceiro + saldoSalario;
@@ -47,9 +125,36 @@ formCalculo.addEventListener("submit", (event) => {
       const recisaoFalecimento = ferias + decimoTerceiro + saldoSalario;
       return recisaoFalecimento;
     case "sem-justa-causa":
-      const recisaoSemJustaCausa = ferias + decimoTerceiro + saldoSalario;
-      return recisaoSemJustaCausa;
+      verbasRescisorias = saldoSalario + feriasVencidas + feriasProps + tercoFerias + decimoTerceiro;
+      deducoes = inss + inssDecimo + irrf;
+      fgts = depositado + saldoSalarioFgts + decimoTerceiroFgts + multa;
 
+      totalRescisao = verbasRescisorias + fgts - deducoes;
+      adicionarTabelaRescisao({
+          verbas: {
+            saldoSalario: saldoSalario,
+            feriasVencidas: feriasVencidas,
+            feriasProps: feriasProps,
+            decimoTerceiro: decimoTerceiro,
+            tercoFerias: tercoFerias,
+            total: verbasRescisorias
+          },
+          deducoes: {
+            inss: inss,
+            inssDecimo: inssDecimo,
+            irrf: irrf,
+            total: deducoes
+          },
+          fgts: {
+            depositado: depositado,
+            multa: multa,
+            total: fgts
+          },
+          rescisao: {
+            total: totalRescisao,
+          },
+        })
+      break;
     default:
       document.getElementById("informacoes").textContent = "nao existe";
   }
@@ -63,12 +168,12 @@ formCalculo.addEventListener("submit", (event) => {
 
   calculos.valores.push({
     data: dataCalculo.toDateString(),
-    valor: formatarValorMonetario(resultado),
+    valor: formatarValorMonetario(totalRescisao),
     motivo: motivo,
   })
 
   localStorage.setItem("calculos", JSON.stringify(calculos))
-  saveResult()
+  showOnHistory(formatarValorMonetario(totalRescisao), dataCalculo.toDateString(), motivo);
 });
 
 function formatarValorMonetario(numero) {
@@ -78,61 +183,6 @@ function formatarValorMonetario(numero) {
   };
   return numero.toLocaleString('pt-BR', options);
 }
-
-function dateFormatter(date) {
-  const arrayDate = date.split(" ")
-  return `${arrayDate[2]} de ${mes[arrayDate[1]]}, ${arrayDate[3]}`
-}
-
-function showValue(value) {
-  document.getElementById("informacoes").textContent = `O valor de sua rescisão será de ${value}`;
-}
-
-function saveResult() {
-  if (localStorage.getItem("calculos")) {
-    const calculos = JSON.parse(localStorage.getItem("calculos"));
-    const cards = document.getElementById("cards");
-
-    calculos.valores.forEach(element => {
-      cards.children[0].innerHTML += `
-        <div class="w-96 h-64 shadow-lg hover:shadow-xl" onclick=showValue("${element.valor}")>
-          <div class="historico-data bg-blue-500 rounded-t-lg">
-            <time datetime="2023-10-24">${dateFormatter(element.data)}</time>
-          </div>
-          <div class="text-black">
-            <p>Resultado: ${element.valor}</p>
-            <br>
-            <p>Motivo: ${element.motivo}</p>
-          </div>
-        </div>
-        `
-    });
-  }
-}
-
-function justaCausa(data) {
-  let salario = parseFloat(data.get('salario'));
-  let dataRecisao = data.get('dtDemissao');
-  let temFeriasVencidas = data.get('feriasVencidas');
-  let ferias = 0;
-  let tercoFerias = 0;
-  let saldoSalario = (salario / 30) * dataRecisao.split("/")[0];
-
-  if (temFeriasVencidas == "Sim") {
-    ferias = salario;
-    tercoFerias = saldoSalario;
-  }
-  let totalRescisao = saldoSalario + ferias + tercoFerias;
-  let valoresRescicao = {
-    Saldo_Salario: saldoSalario,
-    Ferias: ferias,
-    Terco_Ferias: tercoFerias,
-    Total_Rescisao: totalRescisao
-  }
-
-  adicionarTabelaRescisao(valoresRescicao)
-
-};
 
 function adicionarTabelaRescisao(valoresRescicao) {
 
@@ -153,13 +203,26 @@ function adicionarTabelaRescisao(valoresRescicao) {
 
   const tbody = document.createElement("tbody");
 
-  for (var item in valoresRescicao) {
+  for (let item in valoresRescicao) {
     const novaLinha = document.createElement("tr");
+    novaLinha.className = 'resumo'
+    if (item !== 'rescisao'){
+      for (let d in valoresRescicao[item]){
+        const detalhes = document.createElement("tr");
+        detalhes.className = 'detalhes hidden';
+        if (d !== 'total') {detalhes.innerHTML = `
+            <td class="border px-4 py-2">${nomenclatura[d]}</td>
+            <td class="border px-4 py-2">${formatarValorMonetario(valoresRescicao[item][d])}</td>
+          `
+          tbody.appendChild(detalhes);
+        }
+      }
+    }
     novaLinha.innerHTML = `
-    <td class="border px-4 py-2">${item.replace("_", " ")}</td>
-    <td class="border px-4 py-2">${formatarValorMonetario(valoresRescicao[item])}</td>
+    <td class="border px-4 py-2">${nomenclatura[item]}</td>
+    <td class="border px-4 py-2">${formatarValorMonetario(valoresRescicao[item].total)}</td>
   `;
-
+    
     tbody.appendChild(novaLinha);
   };
 
@@ -169,6 +232,53 @@ function adicionarTabelaRescisao(valoresRescicao) {
     divResultado.removeChild(document.getElementById("informacoes"))
   }
   divResultado.appendChild(tabela);
+  const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  checkBox.value = "mais";
+  checkBox.id = "check";
+  checkBox.onclick = () => {
+    if (document.querySelector('input[type="checkbox"]').checked){
+      const linhasOcultas = document.querySelectorAll("tr.detalhes");
+      const linhasResumo = document.querySelectorAll("tr.resumo");
+      removerClasses(linhasOcultas, "hidden");
+      adicionarClasses(linhasResumo, "bg-gray-300");
+      document.querySelector('label').textContent = " Mostrar Menos";
+    } else{
+      const linhasOcultas = document.querySelectorAll("tr.detalhes");
+      const linhasResumo = document.querySelectorAll("tr.resumo");
+      adicionarClasses(linhasOcultas, "hidden");
+      removerClasses(linhasResumo, "bg-gray-300");
+      document.querySelector('label').textContent = " Mostrar Mais";
+    }
+  }
+  const checkLabel = document.createElement("label");
+  checkLabel.innerText = "  Mostrar mais";
+  divResultado.appendChild(checkBox);
+  divResultado.appendChild(checkLabel);
 }
 
-saveResult()
+function mesesDiferenca(dateAdmissao, dataRecisao) {
+  return dataRecisao.getMonth() - dateAdmissao.getMonth() + 
+      (12 * (dataRecisao.getFullYear() - dateAdmissao.getFullYear()))
+}
+
+function formataData(data){
+  return `${data.split('/')[1]}/${data.split('/')[0]}/${data.split('/')[2]}`
+}
+
+function calcDecimoTerceiro(salario, dataAdmissao, dataRecisao){
+  const decimoTerceiro = (salario/12) * dataRecisao.getMonth() - dataAdmissao.getMonth();
+  return Math.round(decimoTerceiro*100)/100;
+}
+
+function removerClasses(elementos, valor) {
+  elementos.forEach(e => {
+    e.classList.remove(valor);
+  });
+}
+
+function adicionarClasses(elementos, valor) {
+  elementos.forEach(e => {
+    e.classList.add(valor);
+  });
+}

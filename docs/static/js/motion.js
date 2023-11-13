@@ -3,7 +3,6 @@ var divParaMudarTexto = document.getElementById('informacoes');
 
 // Adiciona um ouvinte de evento ao formulário
 meuForm.addEventListener('keydown', function(event) {
-    console.log("tab")
     if (event.key === 'Tab') {
         var activeElement = document.activeElement;
         switch (activeElement.id) {
@@ -36,7 +35,6 @@ meuForm.addEventListener('keydown', function(event) {
 
 // Adiciona um ouvinte de evento ao formulário
 meuForm.addEventListener('click', function(event) {
-    console.log("click")
     
     var activeElement = document.activeElement;
     switch (activeElement.id) {
