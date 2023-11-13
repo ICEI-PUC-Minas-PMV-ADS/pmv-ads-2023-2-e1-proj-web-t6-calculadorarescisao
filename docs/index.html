@@ -8,7 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
   <script src="static/js/masks.js" defer></script>
-  <script src="static/js/calculus.js" defer></script>
+  <script src="static/js/calculus.js" type="module" defer></script>
+  <script src="static/js/history.js" type="module" defer></script>
   <script src="static/js/motion.js" defer></script>
 </head>
 
@@ -32,6 +33,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat, commodo erat sit amet,
         scelerisque ligula.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat.
+      </p>
     </div>
     <div id="calculo" class="w-full lg:w-1/2 p-4 backgroud-color-calculo w-2/5 p-8 rounded">
       <form id="formCalculo">
@@ -65,7 +67,7 @@
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
             <label for="startDate" class="block text-sm font-medium text-black">Data Admissão</label>
-            <input type="text" id="dtAdmissao" name="startDate" class="mt-1 p-2 block w-full rounded-lg" maxlength="10"
+            <input type="text" id="dtAdmissao" name="dtAdmissao" class="mt-1 p-2 block w-full rounded-lg" maxlength="10"
               placeholder="DD/MM/YYYY" pattern="\d{2}\/\d{2}\/\d{4}" required>
           </div>
           <div>
@@ -95,33 +97,13 @@
         </div>
 
         <div class="mt-6">
-          <button type="submit" id="submitButton" class="custom-submit-color px-4 py-2 block w-full text-black rounded-md">Enviar</button>
+          <button type="submit" id="submitButton" class="custom-submit-color px-4 py-2 block w-full text-black rounded-md">Calcular</button>
         </div>
       </form>
     </div>
   </div>
   <div id="cards" class="flex overflow-x-auto mt-12">
     <div class="inline-flex space-x-8 h-72">
-      <!--<div class="w-96 h-64 shadow-lg hover:shadow-xl">
-        <div class="historico-data bg-blue-500 rounded-t-lg">
-          <time datetime="2023-10-24">24/10/2023</time>
-        </div>
-        <div class="text-black">
-          <p>texto</p>
-        </div>
-      </div>
-      <!--<div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
-        <p class="text-black">texto</p>
-      </div>
-      <div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
-        <p class="text-black">texto</p>
-      </div>
-      <div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
-        <p class="text-black">texto</p>
-      </div>
-      <div class="w-96 h-64 rounded-lg shadow-lg hover:shadow-xl">
-        <p class="text-black">texto</p>
-      </div>-->
     </div>
 
   </div>
