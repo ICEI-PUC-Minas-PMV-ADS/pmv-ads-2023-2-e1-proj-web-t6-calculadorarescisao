@@ -50,7 +50,7 @@ nav h2{
 
 }
 
-#cards {
+#historico {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -59,7 +59,7 @@ nav h2{
     scrollbar-width: none;  /* Firefox */
 }
 
-#cards::-webkit-scrollbar { 
+#historico::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
 
@@ -67,22 +67,16 @@ nav h2{
   text-align: center;
 }
 
-footer{
+.historico-texto {
+  padding: 15%;
   text-align: center;
 }
 
-.table-custom {
-  border-collapse: separate;
-  border-spacing: 0 8px;
+footer{
+  text-align: center;
 }
 
 .table-custom th {
   background-color: #386ae8;
   color: #fff;
-}
-
-.table-custom th,
-.table-custom td {
-  padding: 10px;
-  text-align: center;
 }
