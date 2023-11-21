@@ -2,7 +2,7 @@
 
 Implementação da aplicação descritas por meio dos requisitos codificados. 
 
-### Cálculo de dispensa de justa causa
+### Cálculos
 
 #### Responsáveis
 
@@ -10,13 +10,13 @@ Fábio Vinícius Barkoski, Gustavo Marques Pereira, Lucas Antonio Riboli, Victor
 
 |Imagem|Descrição|
 |------|---------|
-| ![Captura de tela](img/justa-causa.png) | Captura de tela do cálculo de dispensa de justa causa |
-
+| ![Captura de tela](img/justa-causa.png) | Cálculo de dispensa de justa causa |
+| ![Captura de tela](img/sem-justa-causa.png) | Cálculo de dispensa sem justa causa |
 
 #### Requisito atendido
 
 RF-01: A aplicação deverá realizar o cálculo de dispensas de justa causa.
-
+RF-02: A aplicação deverá realizar o cálculo de dispensas sem justa causa.
 
 #### Artefatos da funcionalidade
 
@@ -25,15 +25,36 @@ RF-01: A aplicação deverá realizar o cálculo de dispensas de justa causa.
 - calculus.js
 - masks.js
 
-<!--#### Estrutura de Dados
+#### Instruções de acesso
 
-[Caso exista estrutura de dados, adicione aqui]-->
+- RF-01:
+    Selecione o motivo "Dispensa de justa causa" e preencha o resto dos campos conforme desejar, em seguida clique em "Calcular" e
+    o resultado aparecerá ao lado, bem como será salvo no histórico de cálculos.
+- RF-02:
+    Selecione o motivo "Dispensa sem justa causa" e preencha o resto dos campos conforme desejar, em seguida clique em "Calcular" e
+    o resultado aparecerá ao lado, bem como será salvo no histórico de cálculos.
 
+
+### Explicações
+
+#### Responsáveis
+
+Lucas Antonio Riboli
+
+|Imagem|Descrição|
+|------|---------|
+| ![Captura de tela](img/explicacoes.png) | Explicações de cada campo |
+
+#### Requisito atendido
+
+RF-13: A aplicação deve permitir que o usuário veja a explicação e os detalhes dos cálculos.
+
+#### Artefatos da funcionalidade
+
+- index.html
+- style.css
+- motion.js
 
 #### Instruções de acesso
 
-Abra um navegador de Internet e clique [aqui](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t6-calculadorarescisao/)
-para abrir a página do cálculo.
-
-Ao abrir selecione o motivo "Dispensa de justa causa" e preencha o resto dos campos conforme desejar, em seguida clique em "Enviar" e
-o resultado aparecerá ao lado, bem como será salvo no histórico de cálculos.
+Selecione um campo e então aparecerá a explicação.
