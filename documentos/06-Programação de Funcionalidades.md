@@ -15,7 +15,7 @@ Fábio Vinícius Barkoski, Gustavo Marques Pereira, Lucas Antonio Riboli, Victor
 
 #### Requisito atendido
 
-RF-01: A aplicação deverá realizar o cálculo de dispensas de justa causa.
+RF-01: A aplicação deverá realizar o cálculo de dispensas de justa causa.<br>
 RF-02: A aplicação deverá realizar o cálculo de dispensas sem justa causa.
 
 #### Artefatos da funcionalidade
