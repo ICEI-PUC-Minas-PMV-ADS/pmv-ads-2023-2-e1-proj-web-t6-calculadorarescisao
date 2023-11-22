@@ -4,17 +4,19 @@
 
 Os testes funcionais a serem realizados na aplicação são descritos a seguir. [Utilize a estrutura abaixo para cada caso de teste]
 
-|Caso de Teste    | CT-X - Título Caso de Teste |
+|Caso de Teste    | CT-01 - Cálculos |
 |:---|:---|
-| Requisitos Associados | RF-X |
-| Objetivo do Teste | Descrição do objetivo do teste |
-| Passos | Indicar passos para a execução do teste |
-| Critérios de êxito | Indicar os critérios de êxito  |
-| Responsável pela elaborar do caso de Teste | Nome do integrante da equipe |
+| Requisitos Associados | RF-01, RF-02, RF-03, RF-04, RF-05, RF-06, RF-07, RF-08, RF-09, RF-10, RF-11, RF-12|
+| Objetivo do Teste | Realizar o cálculo da rescisão e obter o resultado do mesmo|
+| Passos | 1. Na página inicial, preencha os campos, selecionando conforme quiser o motivo e o aviso prévio<br> 2. Clique em "Calcular" |
+| Critérios de êxito | Tabela contendo o resultado do cálculo |
+| Responsável pela elaborar do caso de Teste | Fábio Barkoski |
  
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+|Caso de Teste    | CT-02 - Histórico |
+|:---|:---|
+| Requisitos Associados | RF-X|
+| Objetivo do Teste | Armazenar no histórico cálculo realizado, além de acessar cálculos antigos |
+| Passos | 1. Na página inicial, preencha os campos, selecionando conforme quiser o motivo e o aviso prévio<br> 2. Clique em "Calcular"<br> 3. Nos cards abaixo do cálculo, selecione o último cálculo realizado ou outro que desejar|
+| Critérios de êxito | Tabela contendo o resultado do antigo cálculo a ser consultado |
+| Responsável pela elaborar do caso de Teste | Fábio Barkoski |
+ 

@@ -16,7 +16,17 @@ Fábio Vinícius Barkoski, Gustavo Marques Pereira, Lucas Antonio Riboli, Victor
 #### Requisito atendido
 
 RF-01: A aplicação deverá realizar o cálculo de dispensas de justa causa.<br>
-RF-02: A aplicação deverá realizar o cálculo de dispensas sem justa causa.
+RF-02: A aplicação deverá realizar o cálculo de dispensas sem justa causa.<br>
+RF-03 	A aplicação deverá realizar o cálculo de pedido de demissão.<br>
+RF-04 	A aplicação deverá realizar o cálculo de demissão de comum acordo.<br>
+RF-05 	A aplicação deverá realizar o cálculo de encerramento de contrato de experiência no prazo.<br>
+RF-06 	A aplicação deverá realizar o cálculo de encerramento de contrato de experiência antes prazo.<br>
+RF-07 	A aplicação deverá realizar o cálculo de aposentadoria do empregado.<br>
+RF-08 	A aplicação deverá realizar o cálculo de falecimento do empregador.<br>
+RF-09 	A aplicação deve permitir ao usuário selecionar que não cumprirá aviso prévio.<br>
+RF-10 	A aplicação deve permitir ao usuário selecionar que cumprirá o aviso prévio.<br>
+RF-11 	A aplicação deve permitir ao usuário selecionar que foi dispensado de cumprir aviso prévio.<br>
+RF-12 	A aplicação deve permitir ao usuário selecionar que teve seu aviso prévio indenizado pelo empregado
 
 #### Artefatos da funcionalidade
 
@@ -27,12 +37,8 @@ RF-02: A aplicação deverá realizar o cálculo de dispensas sem justa causa.
 
 #### Instruções de acesso
 
-- RF-01:
-    Selecione o motivo "Dispensa de justa causa" e preencha o resto dos campos conforme desejar, em seguida clique em "Calcular" e
-    o resultado aparecerá ao lado, bem como será salvo no histórico de cálculos.
-- RF-02:
-    Selecione o motivo "Dispensa sem justa causa" e preencha o resto dos campos conforme desejar, em seguida clique em "Calcular" e
-    o resultado aparecerá ao lado, bem como será salvo no histórico de cálculos.
+Selecione um dos motivos disponíveis, bem como um dos avisos disponíveis e preencha o resto dos campos conforme desejar, em seguida clique em "Calcular" e
+o resultado aparecerá ao lado, bem como será salvo no histórico de cálculos.
 
 
 ### Explicações
