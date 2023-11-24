@@ -1,4 +1,5 @@
 import { saveCalc } from "./history.js";
+import motion from "./motion.js";
 import utils from "./utils.js";
 
 const formCalculo = document.getElementById("formCalculo");
@@ -149,7 +150,40 @@ formCalculo.addEventListener("submit", (event) => {
       document.getElementById("informacoes").textContent = "nao existe";
   }
 
-  saveCalc(valoresRescicao, motivo)
+  saveCalc(valoresRescicao, motivo);
+
+  for(let i = 0; i < 7; i++) {
+    event.target[i].disabled = true;
+  }
+  const botao = document.getElementById("submitButton");
+  botao.value = "Novo Cálculo";
+  botao.type = "button";
+  botao.addEventListener("click", e => {
+    const elementos = utils.getElements();
+    for(let i = 0; i < 7; i++) {
+      elementos[i].disabled = false;
+    }
+    const botaoDiv = document.querySelector('#formCalculo .mt-6')
+    botaoDiv.removeChild(document.getElementById("submitButton"))
+    botaoDiv.innerHTML = `
+      <input type="submit" id="submitButton" class="custom-submit-color px-4 py-2 block w-full text-white rounded-md" value="Calcular">
+    `
+    
+    const divInfo = document.getElementById('divInfo')
+
+    divInfo.removeChild(document.querySelector('table'))
+    divInfo.removeChild(document.querySelector('#divInfo label') )
+    divInfo.removeChild(document.querySelector('#check'))
+    
+    const informacoes = document.createElement('p')
+    informacoes.id = 'informacoes'
+    informacoes.className = 'text-lg mb-4'
+    informacoes.textContent = `Aqui são apresentadas informações úteis para preencher os campos dos cálculos,
+        bem como o resultado do seu cálculo.`
+    divInfo.appendChild(informacoes);
+    motion.infos()
+  })
+
 });
 
 function calcDecimoTerceiro(salario, dataAdmissao, dataRecisao){

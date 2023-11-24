@@ -2,7 +2,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#calculo input, select{
+
+
+#calculo input[type=text], input[type=number], select{
     color: black;
 }
 

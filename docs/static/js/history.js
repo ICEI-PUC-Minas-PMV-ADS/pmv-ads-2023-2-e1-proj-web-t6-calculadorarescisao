@@ -30,11 +30,8 @@ window.addEventListener("load", (event) => {
   const cards = document.getElementsByClassName("cards-historico");
   for (let i = 0; i < cards.length; i++){
     cards[i].addEventListener("click", (event) => {
-      console.log('clico')
       const cardId = utils.getCardId(event.target)
-      console.log(cardId);
       const cardValue = utils.getCardValue(cardId);
-      console.log(cardValue)
       if (cardValue){
         utils.adicionarTabelaRescisao(cardValue);
       }
@@ -59,7 +56,7 @@ function getHistory() {
             <time datetime="2023-10-24">${dateFormatter(element.data)}</time>
           </div>
           <div class="historico-texto text-black">
-            <p>Calculo de ${motivos[element.motivo.replace("-", "")]},</p>
+            <p>Calculo de ${motivos[element.motivo.replaceAll("-", "")]},</p>
             <p>tendo o valor da rescisão de ${utils.formatarValorMonetario(element.valor.rescisao.total)}</p>
           </div>
         </div>
@@ -75,10 +72,9 @@ function showOnHistory(valor, data, motivo, id) {
           <div class="historico-data bg-blue-500 rounded-t-lg">
             <time datetime="2023-10-24">${dateFormatter(data)}</time>
           </div>
-          <div class="text-black">
-            <p>Calculo de ${motivos[motivo.replace("-", "")]},</p>
-            <br>
-            <p>Tendo o valor da rescisão de ${valor}</p>
+          <div class="historico-texto text-black">
+            <p>Calculo de ${motivos[motivo.replaceAll("-", "")]},</p>
+            <p>tendo o valor da rescisão de ${utils.formatarValorMonetario(valor)}</p>
           </div>
         </div>
         `

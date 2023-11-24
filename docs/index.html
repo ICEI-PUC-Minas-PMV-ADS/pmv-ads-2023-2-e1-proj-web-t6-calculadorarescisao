@@ -11,7 +11,7 @@
   <script src="static/js/calculus.js" type="module" defer></script>
   <script src="static/js/history.js" type="module" defer></script>
   <script src="static/js/utils.js" type="module" defer></script>
-  <script src="static/js/motion.js" defer></script>
+  <script src="static/js/motion.js" type="module" defer></script>
 </head>
 
 <body class="p-4 text-white">
@@ -23,20 +23,8 @@
       </div>
     </nav>
   </header>
-  <div class="max-w-5xl mx-auto flex flex-col border rounded-md border-black-600/50 shadow-xl p-8 lg:flex-row">
-    <div class="w-full lg:w-1/2 p-4 text-black rounded" id="divInfo">
-      <h1 id="h1-informacoes_titulo" class="text-lg"> Informações Úteis </h1>
-      <p id="informacoes" class="text-lg mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat, commodo erat sit amet,
-        scelerisque ligula.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat, commodo erat sit amet,
-        scelerisque ligula.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat, commodo erat sit amet,
-        scelerisque ligula.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ex consequat.
-      </p>
-    </div>
-    <div id="calculo" class="w-full lg:w-1/2 p-4 backgroud-color-calculo w-2/5 p-8 rounded">
+  <main class="max-w-5xl mx-auto flex flex-col border rounded-md border-black-600/50 shadow-xl p-8 lg:flex-row">
+    <section id="calculo" class="w-full lg:w-1/2 p-4 backgroud-color-calculo w-2/5 p-8 rounded">
       <form id="formCalculo">
         <div class="grid grid-cols-2 gap-4">
           <div class="mb-4">
@@ -98,15 +86,21 @@
         </div>
 
         <div class="mt-6">
-          <button type="submit" id="submitButton" class="custom-submit-color px-4 py-2 block w-full text-black rounded-md">Calcular</button>
+          <input type="submit" id="submitButton" class="custom-submit-color px-4 py-2 block w-full text-white rounded-md" value="Calcular">
         </div>
       </form>
-    </div>
-  </div>
+    </section>
+    <section class="w-full lg:w-1/2 p-4 text-black rounded" id="divInfo">
+      <h1 id="h1-informacoes_titulo" class="text-lg"> Informações </h1>
+      <p id="informacoes" class="text-lg mb-4">
+        Aqui são apresentadas informações úteis para preencher os campos dos cálculos,
+        bem como o resultado do seu cálculo.
+      </p>
+    </section>
+  </main>
   <div id="historico" class="flex overflow-x-auto mt-12">
     <div class="inline-flex space-x-8 h-72">
     </div>
-
   </div>
   <footer class="mt-14 text-black">
     <p> 2023 CalculAi&copy;</p>

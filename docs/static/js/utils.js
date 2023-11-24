@@ -125,7 +125,7 @@ function getCardId(eventTarget) {
   if (eventTarget.getAttribute("card-id")){
     return eventTarget.getAttribute("card-id")
   } else{
-    getCardId(eventTarget.parentElement)
+    return getCardId(eventTarget.parentElement)
   }
 }
 
@@ -140,6 +140,13 @@ function getCardValue(cardId) {
   return retorno;
 }
 
+function getElements() {
+  const inputs = Array.from(document.querySelectorAll("input"));
+  const selects = Array.from(document.querySelectorAll("select"));
+  const elements = inputs.slice(0,4);
+  return elements.concat(selects)
+}
+
 export default {
   formatarValorMonetario,
   adicionarTabelaRescisao,
@@ -149,4 +156,5 @@ export default {
   adicionarClasses,
   getCardId,
   getCardValue,
+  getElements,
 }
