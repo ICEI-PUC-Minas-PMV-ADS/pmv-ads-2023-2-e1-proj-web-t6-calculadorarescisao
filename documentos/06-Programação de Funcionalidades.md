@@ -35,6 +35,12 @@ RF-12 	A aplicação deve permitir ao usuário selecionar que teve seu aviso pr�
 - calculus.js
 - masks.js
 
+### Estruturas de Dados
+
+|Imagem|Descrição|
+|------|---------|
+| ![Captura de tela](img/estrutura-dados-1.png) | Estrutura de dados armazenada no Local Storage |
+
 #### Instruções de acesso
 
 Selecione um dos motivos disponíveis, bem como um dos avisos disponíveis e preencha o resto dos campos conforme desejar, em seguida clique em "Calcular" e
