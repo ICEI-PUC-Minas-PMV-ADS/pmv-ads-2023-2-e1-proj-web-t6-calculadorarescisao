@@ -93,8 +93,15 @@ A respeito das entregas, conseguimos atingir o que se esperava, além de mudarmo
 |------|---------|
 |![Style Guide](img/StyleGuide.png)| Style Guide de nosso Site |
 
+#### Sprint 4
+##### Planejamento
+O planejamento para este sprint foi prosseguir com o projeto utilizando como referência as entregas da etapa. A meta principal foi a implementação dos requisitos funcionais que ainda não haviam sido abordados. Paralelamente, demos atenção à correção de bugs, ao entendimento dos cálculos e à implementação das sugestões do professor.
+
+##### Execução
+No que diz respeito às ferramentas, utilizamos o VSCode e o GitHub.
+
 ### Ferramentas
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+Como ferramentas usamos VSCode e GitHub.
 
 | AMBIENTE                            | PLATAFORMA                         |
 |-------------------------------------|------------------------------------|
