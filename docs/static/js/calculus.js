@@ -60,96 +60,80 @@ formCalculo.addEventListener("submit", (event) => {
   let valoresRescicao = null
   switch (motivo) {
     case "justa-causa":
-      verbasRescisorias = verbasRescisorias + saldoSalario + feriasVencidas
-        + feriasProps + tercoFerias + decimoTerceiro;
+      verbasRescisorias = verbasRescisorias + saldoSalario + feriasVencidas + tercoFerias;
       deducoes = deducoes + inss + inssDecimo + irrf;
       totalRescisao = verbasRescisorias - deducoes;
-
-      valoresRescicao = {
-        verbas: {
-          saldoSalario: saldoSalario,
-          feriasVencidas: feriasVencidas,
-          feriasProps: feriasProps,
-          decimoTerceiro: decimoTerceiro,
-          tercoFerias: tercoFerias,
-          total: verbasRescisorias
-        },
-        deducoes: {
-          inss: inss,
-          inssDecimo: inssDecimo,
-          irrf: irrf,
-          total: deducoes
-        },
-        fgts: {
-          depositado: depositado,
-          multa: multa,
-          total: fgts
-        },
-        rescisao: {
-          total: totalRescisao,
-        },
-      }
-      utils.adicionarTabelaRescisao(valoresRescicao)
       break;
     case "pedido-demissao":
-      const recisaoPedidoDemissao = ferias + decimoTerceiro + saldoSalario;
-      return recisaoPedidoDemissao;
+      verbasRescisorias = saldoSalario + feriasVencidas + feriasProps + tercoFerias + decimoTerceiro;
+      deducoes = inss + inssDecimo + irrf;
+      fgts = depositado + saldoSalarioFgts + decimoTerceiroFgts + multa;
+      totalRescisao = verbasRescisorias + fgts - deducoes;
+      break;
     case "demissao-comum-acordo":
-      const recisaoComumAcordo = ferias + decimoTerceiro + saldoSalario;
-      return recisaoComumAcordo;
+      verbasRescisorias = saldoSalario + feriasVencidas + feriasProps + tercoFerias + decimoTerceiro;
+      deducoes = inss + inssDecimo + irrf;
+      fgts = depositado + (saldoSalarioFgts/2) + decimoTerceiroFgts + multa;
+      totalRescisao = verbasRescisorias + fgts - deducoes;
+      break;
     case "contrato-no-prazo":
-      const recisaoContratoNoPrazo = ferias + decimoTerceiro + saldoSalario;
-      return recisaoContratoNoPrazo;
+      verbasRescisorias = saldoSalario + feriasVencidas + feriasProps + tercoFerias + decimoTerceiro;
+      deducoes = inss + inssDecimo + irrf;
+      fgts = depositado + saldoSalarioFgts + decimoTerceiroFgts + multa;
+      totalRescisao = verbasRescisorias + fgts - deducoes;
+      break;
     case "contrato-antes-prazo":
-      const recisaoContratoAntesPrazoIniciativaEmpregador =
-        ferias + decimoTerceiro + saldoSalario + metadeDosSalariosRestantes;
-      return recisaoContratoAntesPrazoIniciativaEmpregador;
-    case "contrato-antes-prazo":
-      const recisaoContratoAntesPrazoIniciativaEmpregado =
-        ferias + decimoTerceiro + saldoSalario - metadeDosSalariosRestantes;
-      return recisaoContratoAntesPrazoIniciativaEmpregado;
+      verbasRescisorias = saldoSalario + feriasVencidas + tercoFerias;
+      deducoes = inss + inssDecimo + irrf;
+      fgts = depositado + saldoSalarioFgts + decimoTerceiroFgts + multa;
+      totalRescisao = verbasRescisorias + fgts - deducoes;
+      break;
     case "aposentadoria":
-      const recisaoAposentadoria = ferias + decimoTerceiro + saldoSalario;
-      return recisaoAposentadoria;
+      verbasRescisorias = saldoSalario + feriasVencidas + feriasProps + tercoFerias + decimoTerceiro;
+      deducoes = inss + inssDecimo + irrf;
+      fgts = depositado + saldoSalarioFgts + decimoTerceiroFgts + multa;
+      totalRescisao = verbasRescisorias + fgts - deducoes;
+      break;
     case "falecimento":
-      const recisaoFalecimento = ferias + decimoTerceiro + saldoSalario;
-      return recisaoFalecimento;
+      verbasRescisorias = saldoSalario + feriasVencidas + feriasProps + tercoFerias + decimoTerceiro;
+      deducoes = inss + inssDecimo + irrf;
+      fgts = depositado + saldoSalarioFgts + decimoTerceiroFgts + multa;
+      totalRescisao = verbasRescisorias + fgts - deducoes;
+      break;
     case "sem-justa-causa":
       verbasRescisorias = saldoSalario + feriasVencidas + feriasProps + tercoFerias + decimoTerceiro;
       deducoes = inss + inssDecimo + irrf;
       fgts = depositado + saldoSalarioFgts + decimoTerceiroFgts + multa;
       totalRescisao = verbasRescisorias + fgts - deducoes;
-
-      valoresRescicao = {
-        verbas: {
-          saldoSalario: saldoSalario,
-          feriasVencidas: feriasVencidas,
-          feriasProps: feriasProps,
-          decimoTerceiro: decimoTerceiro,
-          tercoFerias: tercoFerias,
-          total: verbasRescisorias
-        },
-        deducoes: {
-          inss: inss,
-          inssDecimo: inssDecimo,
-          irrf: irrf,
-          total: deducoes
-        },
-        fgts: {
-          depositado: depositado,
-          multa: multa,
-          total: fgts
-        },
-        rescisao: {
-          total: totalRescisao,
-        },
-      }
-      utils.adicionarTabelaRescisao(valoresRescicao)
       break;
     default:
       document.getElementById("informacoes").textContent = "nao existe";
   }
-
+  valoresRescicao = {
+    verbas: {
+      saldoSalario: saldoSalario,
+      feriasVencidas: feriasVencidas,
+      feriasProps: feriasProps,
+      decimoTerceiro: decimoTerceiro,
+      tercoFerias: tercoFerias,
+      total: verbasRescisorias
+    },
+    deducoes: {
+      inss: inss,
+      inssDecimo: inssDecimo,
+      irrf: irrf,
+      total: deducoes
+    },
+    fgts: {
+      depositado: depositado,
+      multa: multa,
+      total: fgts
+    },
+    rescisao: {
+      total: totalRescisao,
+    },
+  }
+  utils.adicionarTabelaRescisao(valoresRescicao)
   saveCalc(valoresRescicao, motivo);
 
   for(let i = 0; i < 7; i++) {
