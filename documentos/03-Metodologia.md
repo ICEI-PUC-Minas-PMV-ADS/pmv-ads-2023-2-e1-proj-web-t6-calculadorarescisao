@@ -98,7 +98,8 @@ A respeito das entregas, conseguimos atingir o que se esperava, além de mudarmo
 O planejamento para este sprint foi prosseguir com o projeto utilizando como referência as entregas da etapa. A meta principal foi a implementação dos requisitos funcionais que ainda não haviam sido abordados. Paralelamente, demos atenção à correção de bugs, ao entendimento dos cálculos e à implementação das sugestões do professor.
 
 ##### Execução
-No que diz respeito às ferramentas, utilizamos o VSCode e o GitHub.
+Embora não tenhamos realizado reuniões formais nesta sprint, mantivemos o foco no desenvolvimento, seguindo a abordagem já estabelecida. Destacamos, especialmente, a importância da realização de testes das funcionalidades e da resolução de eventuais problemas identificados, ao mesmo tempo em que integramos as modificações sugeridas pelo professor.
+Os ajustes na calculadora, feitos pelo Lucas, concluiram a parte de cálculos, já o plano de testes, elaborado pelo Fábio, validou todos os calculos.
 
 ### Ferramentas
 Como ferramentas usamos VSCode e GitHub.
