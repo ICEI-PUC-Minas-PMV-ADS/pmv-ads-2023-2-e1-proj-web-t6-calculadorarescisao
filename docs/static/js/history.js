@@ -12,7 +12,7 @@ const mes = {
   Sep: "Setembro",
   Oct: "Outubro",
   Nov: "Novembro",
-  Dez: "Dezembro",
+  Dec: "Dezembro",
 }
 
 const motivos = {

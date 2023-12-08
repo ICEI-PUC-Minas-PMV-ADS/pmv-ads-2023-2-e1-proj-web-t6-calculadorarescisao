@@ -146,6 +146,9 @@ formCalculo.addEventListener("submit", (event) => {
     const elementos = utils.getElements();
     for(let i = 0; i < 7; i++) {
       elementos[i].disabled = false;
+      if (elementos[i] instanceof HTMLInputElement){
+        elementos[i].value = '';
+      }
     }
     const botaoDiv = document.querySelector('#formCalculo .mt-6')
     botaoDiv.removeChild(document.getElementById("submitButton"))
