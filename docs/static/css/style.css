@@ -2,8 +2,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
-
 #calculo input[type=text], input[type=number], select{
     color: black;
 }
@@ -57,12 +55,6 @@ nav h2{
     margin-right: auto;
     width: 60%;
     align-content: center;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-
-#historico::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
 }
 
 .historico-data{
