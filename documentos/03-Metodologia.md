@@ -114,7 +114,7 @@ Nessa ultima etapa, a equipe se reuniu como um todo para criar um novo modelo de
 Ao término desta sprint, conseguimos criar o modelo de apresentação, o vídeo destacando a aplicação e validar a implementação da hospedagem da solução no GitHub Pages.
 |Imagem|Descrição|
 |------|---------|
-|![Pages](img/hospesdagem_pages.png)(img/calculai_site_pages.png)| Hospegagem da solução |
+|![Pages](img/hospesdagem_pages.png)![Site](img/calculai_site_pages.png)| Hospegagem da solução |
 |![Gamma](img/gamma.png)| Apresentação em slides [CalculAi: O Site de Cálculo de Rescisão](https://gamma.app/docs/CalculAi-O-Site-de-Calculo-de-Rescisao-kv42yy54aa9knjc). |
 
 
