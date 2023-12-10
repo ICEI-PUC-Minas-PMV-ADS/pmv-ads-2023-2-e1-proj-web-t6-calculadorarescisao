@@ -103,6 +103,22 @@ Os ajustes na calculadora, feitos pelo Lucas, concluiram a parte de cálculos. O
 ### Ferramentas
 Como ferramentas usamos VSCode e GitHub.
 
+#### Sprint 5
+##### Planejamento
+O planejamento para este sprint foi prosseguir com o projeto utilizando como referência as entregas da etapa, porém por se tratar de uma etapa mais burocratica, buscamos apenas definir
+formatos e executa-los para atingir o que planejavamos para o fim do projeto.
+
+##### Execução
+A ideia do time para essa etapa foi criarmos uma reunião e todos juntos criarmos tanto um novo
+modelo de apresentação quanto o video que demonstrasse nossa aplicação de ponta a ponta.
+A ideia da apresentação foi usando a ferramenta ![Gamma](https://gamma.app/), onde tentamos usar ideias de IA como auxilio na criação dos Layouts de cada slide. Para o video de demonstação, ainda juntos, elegemos um apresentador e tentamos criar uma base de assunto para se tratado no video, ajudando assim o apresentador. O video foi gravado primeiramente pelo teams, porém a versão final foi feita usando OBS.
+
+##### Evidências
+Ao final dessa sprint conseguimos tanto criar o modelo de apresentação, o video de apresentação da aplicação e validar a implementação da hospedagem da solução no GitHub Pages.
+|Imagem|Descrição|
+|------|---------|
+|![Style Guide](img/StyleGuide.png)| Style Guide de nosso Site |
+
 | AMBIENTE                            | PLATAFORMA                         |
 |-------------------------------------|------------------------------------|
 | Repositório de código fonte         | [GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-calculadorarescisao/tree/main/codigo-fonte) |
