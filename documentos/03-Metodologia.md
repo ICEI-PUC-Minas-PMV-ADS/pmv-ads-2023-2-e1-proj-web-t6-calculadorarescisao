@@ -105,19 +105,19 @@ Como ferramentas usamos VSCode e GitHub.
 
 #### Sprint 5
 ##### Planejamento
-O planejamento para este sprint foi prosseguir com o projeto utilizando como referência as entregas da etapa, porém por se tratar de uma etapa mais burocratica, buscamos apenas definir
-formatos e executa-los para atingir o que planejavamos para o fim do projeto.
+O plano para este sprint envolveu avançar no projeto e finaliza-lo, utilizando as entregas da etapa como referência. Apesar de ser uma fase mais burocrática, focamos na definição de formatos e na execução para alcançar nossos objetivos planejados para o término do projeto.
 
 ##### Execução
-A ideia do time para essa etapa foi criarmos uma reunião e todos juntos criarmos tanto um novo
-modelo de apresentação quanto o video que demonstrasse nossa aplicação de ponta a ponta.
-A ideia da apresentação foi usando a ferramenta ![Gamma](https://gamma.app/), onde tentamos usar ideias de IA como auxilio na criação dos Layouts de cada slide. Para o video de demonstação, ainda juntos, elegemos um apresentador e tentamos criar uma base de assunto para se tratado no video, ajudando assim o apresentador. O video foi gravado primeiramente pelo teams, porém a versão final foi feita usando OBS.
+Nessa ultima etapa, a equipe se reuniu como um todo para criar um novo modelo de apresentação e um vídeo que destacando nossa aplicação. Utilizamos a ferramenta ![Gamma](https://gamma.app/), para a apresentação, explorando ideias de IA nos layouts. Para o vídeo, escolhemos um apresentador e definimos uma estrutura de tópicos colaborativamente. Inicialmente foi gravado no Teams, porém a versão final foi produzida no OBS.
 
 ##### Evidências
-Ao final dessa sprint conseguimos tanto criar o modelo de apresentação, o video de apresentação da aplicação e validar a implementação da hospedagem da solução no GitHub Pages.
+Ao término desta sprint, conseguimos criar o modelo de apresentação, o vídeo destacando a aplicação e validar a implementação da hospedagem da solução no GitHub Pages.
 |Imagem|Descrição|
 |------|---------|
-|![Style Guide](img/StyleGuide.png)| Style Guide de nosso Site |
+|![Pages](img/hospesdagem_pages.png)(img/calculai_site_pages.png)| Hospegagem da solução |
+|![Gamma](img/gamma.png)| Apresentação em slides [CalculAi: O Site de Cálculo de Rescisão](https://gamma.app/docs/CalculAi-O-Site-de-Calculo-de-Rescisao-kv42yy54aa9knjc). |
+
+
 
 | AMBIENTE                            | PLATAFORMA                         |
 |-------------------------------------|------------------------------------|
